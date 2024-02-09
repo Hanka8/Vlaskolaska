@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     background-image: url(../images/bg-marble.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,8 +30,8 @@
     }
 }
 
-.intro {
-    width: clamp(350px, 60%, 600px);
+.intro-container {
+    width: clamp(300px, 60%, 600px);
     aspect-ratio: 1.1;
     display: flex;
     background-size: 90%;
@@ -60,8 +60,9 @@
     width: 100%;
     display: block;
     text-align: center;
-    background-color: rgba(223, 241, 243, 0.295);
-    backdrop-filter: blur(25px);
+    color: black;
+    /* background-color: rgba(223, 241, 243, 0.295);
+    backdrop-filter: blur(25px); */
     padding: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
