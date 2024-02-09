@@ -25,17 +25,20 @@ export default function Intro() {
                     <img className='intro-img fade-in' src="./images/intro/1.svg" alt="illustration" />
                 </div>
                 <div className='intro-frame' style={{ display: currentFrame === 2 ? 'block' : 'none' }}>
-                    <img className='intro-img fade-in' src="./images/intro/2.svg" alt="illustration" />
+                    <img className='intro-img fade-in' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
+                    <img className='intro-img fade-in' src="./images/intro/2_after.svg" alt="illustration" />
                 </div>
                 <div className='intro-frame' style={{ display: currentFrame === 3 ? 'block' : 'none' }}>
-                    <img className='intro-img' src="./images/intro/2.svg" alt="illustration" />
+                    <img className='intro-img' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
+                    <img className='intro-img' src="./images/intro/2_after.svg" alt="illustration" />
                     <img className='intro-img bounce' src="./images/intro/3.svg" alt="illustration" />
                 </div>
                 <div className='intro-frame' style={{ display: currentFrame === 4 ? 'block' : 'none' }}>
-                    <img className='intro-img' src="./images/intro/2.svg" alt="illustration" />
+                    <img className='intro-img' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
+                    <img className='intro-img' src="./images/intro/2_after.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/3.svg" alt="illustration" />
                     <img className='intro-img bounce' src="./images/intro/4.svg" alt="illustration" />
                 </div>
