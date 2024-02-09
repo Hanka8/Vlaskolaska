@@ -6,6 +6,10 @@
 
 :root {
     --logo-background: #ffffff;
+    --custom-brown: #805f46ff;
+    --custom-blue: #dff1f3ff;
+    --custom-orange: #ffe2d4ff;
+    --custom-yellow: #f9e7cfff;
 }
 
 .intro-box {
@@ -13,10 +17,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../images/bg1.svg);
+    background-image: url(../images/bg-marble.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: #a0a78a;
+}
+
+@media screen and (max-width: 768px){
+    .intro-box {
+        background-image: url(../images/bg-marble-small.webp);
+    }
 }
 
 .intro {
@@ -30,7 +41,7 @@
     background-color: var(--logo-background);
     border: 4rem solid var(--logo-background);
     border-radius: 50%;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .intro-img {
@@ -41,6 +52,26 @@
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.intro-quote {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: rgba(223, 241, 243, 0.295);
+    backdrop-filter: blur(25px);
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px){
+    .intro-quote {
+        font-size: 1rem;
+    }
 }
 
 .fade-in {

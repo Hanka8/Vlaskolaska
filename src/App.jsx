@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 //components
 import Intro from './components/Intro'
 import './styles/intro.css'
+import './styles/index.css'
+
 
 function App() {
 

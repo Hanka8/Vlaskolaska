@@ -40,6 +40,7 @@ export default function Intro() {
                     <img className='intro-img bounce' src="./images/intro/4.svg" alt="illustration" />
                 </div>
             </div>
+            <p className='intro-quote fade-in' style={{ display: currentFrame === 4 ? 'block' : 'none' }} >Tvorbou z lásky jsou svou nejlepší verzí všechny krásky.</p>
         </div>
     );
 }
