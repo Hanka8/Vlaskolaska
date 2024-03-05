@@ -51,12 +51,24 @@ export default function SwipeableTemporaryDrawer() {
     <div>
         <React.Fragment key={"right"}>
           {/* <Button onClick={toggleDrawer("right", true)}>{"right"}</Button> */}
-          <MenuButton toggleDrawer={toggleDrawer}/>
+          <MenuButton toggleDrawer={toggleDrawer} drawerOpen={state["right"]}/>
           <SwipeableDrawer
             anchor={"right"}
             open={state["right"]}
             onClose={toggleDrawer("right", false)}
             onOpen={toggleDrawer("right", true)}
+            // Custom styles for SwipableDrawer
+            sx={{
+              '& .MuiPaper-root': {
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              },
+              '& .MuiListItemText-root': {
+                color: "#e7d7d6",
+              },
+              '& .MuiButtonBase-root:hover': {
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              },
+            }}
           >
           {list("right")}
           </SwipeableDrawer>
