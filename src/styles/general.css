@@ -1,0 +1,47 @@
+:root {
+    --logo-background: #ffffff;
+    --custom-brown: #805f46ff;
+    --custom-blue: #dff1f3ff;
+    --custom-orange: #ffe2d4ff;
+    --custom-yellow: #f9e7cfff;
+}
+
+.h-1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--custom-orange);
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.596))
+}
+
+.h-2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline;
+}
+
+.h-2::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background-image: url(../images/sponka.svg);
+    background-repeat: no-repeat;
+}
+
+.list-undecorated {
+    list-style: none;
+}
+
+.text {
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}

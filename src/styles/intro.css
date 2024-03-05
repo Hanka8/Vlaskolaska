@@ -18,10 +18,10 @@
     align-items: center;
     height: 100dvh;
     background-image: url(../images/bg-marble.webp);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #a0a78a;
 }
 
 @media screen and (max-width: 768px){
