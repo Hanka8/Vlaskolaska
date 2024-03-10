@@ -12,26 +12,25 @@
     gap: 2rem;
     padding: 2rem;
 
-    height: 100dvh;
+    min-height: 100dvh;
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../images/bg-marble.webp);
-    background-attachment: fixed;
+    background-image: url(../images/bg1.svg);
+    background-color: #d5ccc2;
 }
 
 @media screen and (max-width: 768px){
     .about {
         flex-direction: column;
-        background-image: url(../images/bg-marble-small.webp);
     }
-    
 }
 
 .about-logo {
-    width: 50%;
+    width: 75%;
 }
+
 
 .about-logo img {
     width: 100%;
@@ -41,4 +40,16 @@
 
 .about-content {
     margin-top: 3rem;
+}
+
+.about-picture img {
+    width: 30%;
+    height: auto;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.596));
+}
+
+@media screen and (max-width: 768px) {
+    .about-picture img {
+        width: 75%;
+    }
 }

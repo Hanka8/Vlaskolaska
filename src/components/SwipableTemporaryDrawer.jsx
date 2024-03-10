@@ -5,7 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuButton from './MenuButton';
+import MenuButton from './Landing/MenuButton';
 
 
 export default function SwipeableTemporaryDrawer() {

@@ -17,6 +17,9 @@ export default function About() {
                 <li className='text'>Simeona Lanta Akademie účesů: Kurz individual</li>
                 <li className='text'>Berenica Zita: Individuální kurz líčení</li>
             </ul>
+            <picture className='about-picture'>
+                <img src="images/general/about.webp" alt="" />
+            </picture>
         </div>
     </div>
   )
