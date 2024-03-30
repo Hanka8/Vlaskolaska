@@ -25,12 +25,17 @@
 .h-2::after {
     position: absolute;
     content: "";
-    width: 100vw;
+    width: 130px;
     height: 1rem;
     background-image: url(../images/sponka.svg);
     background-repeat: no-repeat;
     bottom: -1rem;
     left: -5px;
+}
+
+.h-2.underline-centered::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .h-2 + * {
@@ -52,6 +57,11 @@
     font-family: "Roboto Condensed", sans-serif;
     color: black;
     margin-bottom: 1rem;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: 300;
 }
 
 .big {
@@ -152,21 +162,36 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    flex-wrap: wrap;
     text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .content-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 
 .content-banner {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 }

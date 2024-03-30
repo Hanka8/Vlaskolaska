@@ -6,6 +6,7 @@ import Intro from './components/Landing/Intro'
 import About from './components/About'
 import Booking from './components/Booking'
 import Services from './components/Services'
+import Contact from './components/Contact'
 import SwipeableTemporaryDrawer from './components/SwipableTemporaryDrawer';
 import './styles/general.css'
 import './styles/intro.css'
@@ -22,6 +23,8 @@ function App() {
       <About />
       <Booking />
       <Services />
+
+      <Contact />
 
       {/* <a href="http://www.freepik.com">Background designed by Freepik</a> */}
     </>
