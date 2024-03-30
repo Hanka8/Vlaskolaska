@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 export default function Intro() {
     const [currentFrame, setCurrentFrame] = useState(1);
 
@@ -47,4 +46,6 @@ export default function Intro() {
             </div>
         </div>
     );
+   
 }
+
