@@ -25,11 +25,12 @@
 .h-2::after {
     position: absolute;
     content: "";
-    display: block;
     width: 100vw;
     height: 1rem;
     background-image: url(../images/sponka.svg);
     background-repeat: no-repeat;
+    bottom: -1rem;
+    left: -5px;
 }
 
 .h-2 + * {
@@ -51,6 +52,14 @@
     font-family: "Roboto Condensed", sans-serif;
     color: black;
     margin-bottom: 1rem;
+}
+
+.big {
+    font-size: 1.7rem;
+}
+
+.emphasized {
+    font-weight: 600;
 }
 
 .tip {
@@ -85,10 +94,14 @@
     margin-left: 2rem;
 }
 
+.mb-02 {
+    margin-bottom: 0.2rem;
+}
+
 /* __content page__ */
 .page {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: top;
     gap: 2rem;
     padding: 2rem;
@@ -119,6 +132,7 @@
 
 .page-content {
     margin-top: 3rem;
+    width: 100%;
 }
 
 .page-picture img {
@@ -131,4 +145,28 @@
     .page-picture img {
         width: 75%;
     }
+}
+
+.content-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.content-banner {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
