@@ -1,5 +1,7 @@
 import React from 'react'
-import { FaWhatsapp, FaAt, FaInstagram, FaHome } from "react-icons/fa"
+import { FaWhatsapp, FaAt, FaInstagram } from "react-icons/fa"
+import { SlLocationPin } from "react-icons/sl";
+import { MdAlternateEmail } from "react-icons/md";
 
 export default function Contact() {
   return (
@@ -8,10 +10,27 @@ export default function Contact() {
             <img src="images/about.svg" alt="booking process" />
         </div>
         <div className='page-content'>
-            <FaWhatsapp size={30}/>
-            <FaAt size={30}/>
-            <FaInstagram size={30}/>
-            <FaHome size={30}/>
+            <p className='h-3'>Karolína Čechová</p>
+            <div className='contacts-flex'>
+              <p>IČO</p>
+              <p>21104387</p>
+            </div>
+            <div className='contacts-flex'>
+              <FaWhatsapp size={30}/>
+              <a className='link' href="https://api.whatsapp.com/send?phone=732928740">+420732928740</a>
+            </div>
+            <div className='contacts-flex'>
+              <MdAlternateEmail size={30}/>
+              <a className='link' href="mailto:karolinacechova22@gmail.com">karolinacechova22@gmail.com</a>
+            </div>
+            <div className='contacts-flex'>
+              <FaInstagram size={30}/>
+              <a className='link' href="https://www.instagram.com/vlaskolaska/">vlaskolaska</a>
+            </div>
+            <div className='contacts-flex'>
+              <SlLocationPin size={30}/>
+              <a className='link' href='https://maps.app.goo.gl/CAkFdRvhrEF8vnvq9'>Praha 13</a>
+            </div>
         </div>
     </div>
   )
