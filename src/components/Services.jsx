@@ -4,7 +4,7 @@ export default function Services() {
   return (
     <div className='page'>
       <div className='page-logo'>
-        <img src="images/about.svg" alt="booking process" />
+        <img src="images/pricelist.svg" alt="ceník" />
       </div>
       <div className='page-content'>
         <div className='content-flex'>

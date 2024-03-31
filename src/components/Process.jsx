@@ -4,7 +4,7 @@ export default function Booking() {
   return (
     <div className='page'>
       <div className='page-logo'>
-        <img src="images/about.svg" alt="booking process" />
+        <img src="images/process.svg" alt="průvodce procesem" />
       </div>
       <div className='page-content'>
         <h2 className='h-2'>První krok</h2>

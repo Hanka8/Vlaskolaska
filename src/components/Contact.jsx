@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div className='page'>
         <div className='page-logo'>
-            <img src="images/about.svg" alt="booking process" />
+            <img src="images/contact.svg" alt="kontakt"/>
         </div>
         <div className='page-content'>
             <p className='h-3'>Karolína Čechová</p>

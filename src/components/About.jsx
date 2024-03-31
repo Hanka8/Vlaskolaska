@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='page'>
       <div className='page-logo'>
-        <img src="images/about.svg" alt="about me" />
+        <img src="images/about.svg" alt="o mně" />
       </div>
       <div className='page-content'>
         <p className='text'>Jmenuji se Karolína a pocházím ze Šternberka u Olomouce. Nyní žiji a působím v Praze. Můj zájem o svatby se začal projevovat již na střední škole, avšak mé akademické vzdělání směřovalo jiným směrem, a proto jsem se rozhodla věnovat svou kariéru Armádě České republiky.</p>
