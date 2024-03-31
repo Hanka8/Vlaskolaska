@@ -10,12 +10,8 @@ export default function Contact() {
             <img src="images/contact.svg" alt="kontakt"/>
         </div>
         <div className='page-content'>
-            <p className='h-3'>Karolína Čechová</p>
-            <div className='contacts-flex'>
-              <p>IČO</p>
-              <p>21104387</p>
-            </div>
-            <div className='contacts-flex'>
+            <p className='h-2'>Karolína Čechová, IČO: 21104387</p>
+            <div className='contacts-flex mt-2'>
               <FaWhatsapp size={30}/>
               <a className='link' href="https://api.whatsapp.com/send?phone=732928740">+420732928740</a>
             </div>
