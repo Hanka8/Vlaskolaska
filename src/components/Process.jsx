@@ -1,5 +1,6 @@
 import React from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
+import { Link } from 'react-router-dom'
 
 export default function Process() {
   return (
@@ -11,7 +12,11 @@ export default function Process() {
         </div>
         <div className='page-content'>
           <h2 className='h-2'>První krok</h2>
-          <p className='text'>Neváhejte se na mě obrátit s dotazy ohledně volného termínu. Můžete mi zavolat nebo napsat na e-mail, který najdete v sekci <a className='link' href="#contact">Kontakt</a>.<br></br>
+          <p className='text'>Neváhejte se na mě obrátit s dotazy ohledně volného termínu. Můžete mi zavolat nebo napsat na e-mail, který najdete v sekci 
+            <Link to="/kontakt" style={{textDecoration: "none", color: "inherit", marginLeft:".25rem"}}>
+              <a className='link'>Kontakt</a>.
+              <br></br>
+            </Link>
               Vážím si toho, že do mě vkládáte důvěru a ve Váš den se mi svěříte do rukou.<br></br>
               Budu ráda, když mi před prvním setkáním pošlete fotky přibližných představ účesu, případně i líčení.<br></br>
               Ke zvolení té pravé vizáže pomůže i fotka Vašich vlasů zezadu a Vašich svatebních šatů. Není to však podmínkou.<br></br>
