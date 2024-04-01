@@ -5,6 +5,13 @@
     --custom-orange: #ffe2d4ff;
     --custom-yellow: #f9e7cfff;
     --light-brown: #efe3d7;
+    --text: #513017;
+}
+
+::selection {
+    background-color: var(--custom-brown);
+    color: var(--light-brown);
+
 }
 
 * {
@@ -24,7 +31,8 @@
     font-weight: 700;
     position: relative;
     display: inline;
-    color: black;
+    color: #eefbfc;
+    text-shadow: 0.1rem 0.1rem .24rem var(--text);
 }
 
 .h-2::after {
@@ -51,6 +59,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: .5rem;
+    color: var(--custom-brown);
 }
 
 .list-undecorated {
@@ -59,7 +68,7 @@
 
 .text {
     font-size: 1rem;
-    color: black;
+    color: var(--text);
     margin-bottom: 1rem;
 }
 
