@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuButton from './Landing/MenuButton';
-
+import { Link } from 'react-router-dom'
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -36,13 +36,15 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['O mně', 'Rezervace & průvodce procesem', 'Služby a ceník', 'Galerie', "Recenze", "Kontakt", "Doporučuji"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+      {[['O mně', "/omne"], ['Průvodce procesem', "/proces"], ['Služby a ceník', "/sluzby"], ['Galerie', "/galerie"], ["Kontakt", "/kontakt"]].map((text, index) => (
+        <Link to={text[1]} style={{textDecoration: "none", color: "inherit"}}>
+          <ListItem key={text[0]} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText primary={text[0]} />
             </ListItemButton>
           </ListItem>
-        ))}
+        </Link>
+      ))}
       </List>
     </Box>
   );

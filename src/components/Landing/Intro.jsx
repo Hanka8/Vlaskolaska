@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SwipeableTemporaryDrawer from '../SwipableTemporaryDrawer';
 
 export default function Intro() {
     const [currentFrame, setCurrentFrame] = useState(1);
@@ -20,7 +21,7 @@ export default function Intro() {
 
     return (
         <div className='intro-box'>
-            
+            <SwipeableTemporaryDrawer />
             <div className='intro-container'>
                 <div className='intro-frame' style={{ display: currentFrame === 1 ? 'block' : 'none' }}>
                     <img className='intro-img fade-in' src="./images/intro/1.svg" alt="illustration" />
