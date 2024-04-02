@@ -1,3 +1,4 @@
+
 :root {
     --logo-background: #ffffff;
     --custom-brown: #805f46ff;
@@ -109,6 +110,10 @@
     color: #efe3d7;
 }
 
+.pr-6 {
+    padding-right: 6rem;
+}
+
 .mt-2 {
     margin-top: 2rem;
 }
@@ -119,6 +124,10 @@
 
 .mb-02 {
     margin-bottom: 0.2rem;
+}
+
+.mi-10 {
+    margin-inline: 10rem;
 }
 
 /* __content page__ */
@@ -133,13 +142,18 @@
     background-size: cover;
     background-position: center;
     background-image: url(../images/bg1.svg);
-    background-color: var(--light-brown)
+    background-color: var(--light-brown);
 }
 
 @media screen and (max-width: 768px) {
     .page {
         flex-direction: column;
     }
+}
+
+.page-gallery {
+    flex-direction: column;
+    gap: 0;
 }
 
 .page-logo img {
@@ -213,4 +227,19 @@
     align-items: center;
     margin-bottom: .8rem;
     font-family: "Roboto Condensed", sans-serif;
+}
+
+.gallery-nav {
+    gap: 1rem;
+    margin-bottom: 3rem;
+    position: sticky;
+    inset: 0;
+    z-index: 100;
+}
+
+.gallery-nav-ul {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }

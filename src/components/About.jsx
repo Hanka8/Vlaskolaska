@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <SwipeableTemporaryDrawer />
-      <div className='page'>
+      <div className='page pr-6'>
         <div className='page-logo'>
           <img src="images/about.svg" alt="o mně" />
         </div>
