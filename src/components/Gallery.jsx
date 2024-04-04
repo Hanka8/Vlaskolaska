@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -103,7 +103,67 @@ const images = [
   }
 ];
 
+const images2 = [
+  {
+    original: "images/nevesty/1.webp",
+    thumbnail: "images/nevesty/1.webp",
+  },
+  {
+    original: "images/nevesty/2.webp",
+    thumbnail: "images/nevesty/2.webp",
+  },
+  {
+    original: "images/nevesty/3.webp",
+    thumbnail: "images/nevesty/3.webp",
+  },
+  {
+    original: "images/nevesty/4.webp",
+    thumbnail: "images/nevesty/4.webp",
+  },
+  {
+    original: "images/nevesty/5.webp",
+    thumbnail: "images/nevesty/5.webp",
+  },
+  {
+    original: "images/nevesty/6.webp",
+    thumbnail: "images/nevesty/6.webp",
+  },
+  {
+    original: "images/nevesty/7.webp",
+    thumbnail: "images/nevesty/7.webp",
+  },
+  {
+    original: "images/nevesty/8.webp",
+    thumbnail: "images/nevesty/8.webp",
+  },
+  {
+    original: "images/nevesty/9.webp",
+    thumbnail: "images/nevesty/9.webp",
+  },
+  {
+    original: "images/nevesty/10.webp",
+    thumbnail: "images/nevesty/10.webp",
+  },
+  {
+    original: "images/nevesty/11.webp",
+    thumbnail: "images/nevesty/11.webp",
+  },
+];
+
 export default function Gallery() {
+
+  const [scrolled, setScrolled] = React.useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 315;
+      setScrolled(isScrolled);
+    };
+
+    document.addEventListener('scroll', handleScroll);
+
+  }, [scrolled]);
+
   return (
     <>
       <SwipeableTemporaryDrawer />
@@ -111,8 +171,7 @@ export default function Gallery() {
         <div className='page-logo'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
-        <div className='page-content'>
-          <nav className='gallery-nav'>
+         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
             <ul className='gallery-nav-ul'>
               <li className='gallery-nav-item'>
                 <a href="#pripravy">Přípravy</a>
@@ -131,8 +190,23 @@ export default function Gallery() {
               </li>
             </ul>
           </nav>
-          <ImageList variant="masonry" className='mi-10' cols={3} gap={35}>
+        <div className='page-content'>
+          <h2 className='h-2 mi-10' id="pripravy">Přípravy</h2>	
+          <ImageList variant="masonry" className='mi-10 mt-2 mb-5' cols={3} gap={35}>
             {images.map((item) => (
+              <ImageListItem key={item.original}>
+                <img className='gallery-img'
+                  srcSet={`${item.original}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.original}?w=248&fit=crop&auto=format`}
+                  alt={item.original}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          <h2 className='h-2 mi-10' id="nevesty">Nevěsty</h2>
+          <ImageList variant="masonry" className='mi-10 mt-2' cols={3} gap={35}>
+            {images2.map((item) => (
               <ImageListItem key={item.original}>
                 <img
                   srcSet={`${item.original}?w=248&fit=crop&auto=format&dpr=2 2x`}

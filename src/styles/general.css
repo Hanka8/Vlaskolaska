@@ -19,6 +19,14 @@
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
 .h-1 {
     font-size: 3rem;
     font-weight: 700;
@@ -110,12 +118,22 @@
     color: #efe3d7;
 }
 
+.scrolled {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
+    background-color: #805f46cd;
+    backdrop-filter: blur(1rem);
+}
+
 .pr-6 {
     padding-right: 6rem;
 }
 
 .mt-2 {
     margin-top: 2rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
 }
 
 .ml-2 {
@@ -136,7 +154,6 @@
     justify-content: flex-start;
     align-items: top;
     gap: 4rem;
-    padding: 2rem;
     min-height: 100dvh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,6 +235,8 @@
     }
 }
 
+/* specifics */
+
 .contacts-flex {
     font-size: 1.5rem;
     color: var(--custom-brown);
@@ -235,11 +254,40 @@
     position: sticky;
     inset: 0;
     z-index: 100;
-}
+}   
 
 .gallery-nav-ul {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.gallery-nav {
+    color: var(--text);
+}
+
+.gallery-nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.scrolled .gallery-nav-ul {
+    color: #eefbfc;
+    text-shadow: 0.1rem 0.1rem .24rem var(--text);
+}
+
+.scrolled .gallery-nav-ul .gallery-nav-item:hover {
+    color: var(--custom-yellow);
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+    transition: transform 200ms;
+    cursor: pointer;
+    filter: sepia(100%);
 }
