@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 // creating arrays of numbers from 1 to 32 and 1 to 29 because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
-const ucesy = Array.from(Array(29).keys(), (i) => i + 1);
+const ucesy = Array.from(Array(21).keys(), (i) => i + 1);
 
 const style = {
   position: 'absolute',
@@ -51,27 +51,27 @@ export default function Gallery() {
         <div className='page-logo'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
-         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
-            <ul className='gallery-nav-ul'>
-              <li className='gallery-nav-item'>
-                <a href="#pripravy">Přípravy</a>
-              </li>
-              <li className='gallery-nav-item'>
-                <a href="#nevesty">Nevěsty</a>
-              </li>
-              <li className='gallery-nav-item'>
-                <a href="#ucesy">Účesy</a>
-              </li>
-              <li className='gallery-nav-item'>
-                <a href="#makeup">Makeup</a>
-              </li>
-              <li className='gallery-nav-item'>
-                <a href="#doplnky">Doplňky</a>
-              </li>
-            </ul>
-          </nav>
+        <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
+          <ul className='gallery-nav-ul'>
+            <li className='gallery-nav-item'>
+              <a href="#pripravy">Přípravy</a>
+            </li>
+            <li className='gallery-nav-item'>
+              <a href="#nevesty">Nevěsty</a>
+            </li>
+            <li className='gallery-nav-item'>
+              <a href="#ucesy">Účesy</a>
+            </li>
+            <li className='gallery-nav-item'>
+              <a href="#makeup">Makeup</a>
+            </li>
+            <li className='gallery-nav-item'>
+              <a href="#doplnky">Doplňky</a>
+            </li>
+          </ul>
+        </nav>
         <div className='page-content'>
-          <h2 className='h-2 mi-10' id="pripravy">Přípravy</h2>	
+          <h2 className='h-2 mi-10 pt-6' id="pripravy">Přípravy</h2>	
           <ImageList variant="masonry" className='mi-10 mt-2 mb-5' cols={3} gap={35}>
             {pripravy.map((item) => (
               <ImageListItem key={item}>
@@ -100,13 +100,13 @@ export default function Gallery() {
               </ImageListItem>
             ))}
           </ImageList>
-          <h2 className='h-2 mi-10' id="nevesty">Nevěsty</h2>
+          <h2 className='h-2 mi-10 pt-6' id="nevesty">Nevěsty</h2>
           <ImageList variant="masonry" className='mi-10 mt-2' cols={3} gap={35}>
             {ucesy.map((item) => (
               <ImageListItem key={item}>
                 <img
-                  srcSet={`images/pripravy/${item}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  src={`images/pripravy/${item}.webp?w=248&fit=crop&auto=format`}
+                  srcSet={`images/nevesty/${item}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`images/nevesty/${item}.webp?w=248&fit=crop&auto=format`}
                   alt={item}
                   loading="lazy"
                 />
