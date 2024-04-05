@@ -118,10 +118,9 @@ a:visited {
     color: #efe3d7;
 }
 
-.scrolled {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
-    background-color: #805f46cd;
-    backdrop-filter: blur(1rem);
+.absolute-top {
+    position: absolute;
+    z-index: 999;
 }
 
 .pt-6 {
@@ -175,6 +174,10 @@ a:visited {
 .page-gallery {
     flex-direction: column;
     gap: 0;
+}
+
+.page-logo {
+    margin: 2rem;
 }
 
 .page-logo img {
@@ -252,12 +255,20 @@ a:visited {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+.scrolled {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
+    backdrop-filter: blur(1rem);
+    transition: 300ms;
+    background-color: var(--custom-brown);
+    position: sticky;
+}
+
 .gallery-nav {
     gap: 1rem;
     margin-bottom: 3rem;
-    position: sticky;
     inset: 0;
     z-index: 100;
+    color: var(--text);
 }   
 
 .gallery-nav-ul {
@@ -266,10 +277,7 @@ a:visited {
     display: flex;
     justify-content: center;
     gap: 1rem;
-}
-
-.gallery-nav {
-    color: var(--text);
+    margin-top: 8rem;
 }
 
 .gallery-nav-ul {
@@ -283,10 +291,19 @@ a:visited {
 .scrolled .gallery-nav-ul {
     color: #eefbfc;
     text-shadow: 0.1rem 0.1rem .24rem var(--text);
+    margin-top: 0;
+}
+
+.gallery-nav-ul .gallery-nav-item:hover {
+    color: var(--custom-brown);
+    transform: scale(1.1);
+    transition: 200ms;
 }
 
 .scrolled .gallery-nav-ul .gallery-nav-item:hover {
     color: var(--custom-yellow);
+    transform: scale(1.1);
+    transition: 200ms;
 }
 
 .gallery-img:hover {

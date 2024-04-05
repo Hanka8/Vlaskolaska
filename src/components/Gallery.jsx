@@ -5,7 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 
-// creating arrays of numbers from 1 to 32 and 1 to 29 because of the number of images in the folders and naming convention
+// creating arrays of numbers because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
 const ucesy = Array.from(Array(21).keys(), (i) => i + 1);
 
@@ -36,7 +36,7 @@ export default function Gallery() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 315;
+      const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
     };
 
@@ -48,7 +48,7 @@ export default function Gallery() {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page page-gallery'>
-        <div className='page-logo'>
+        <div className='page-logo absolute-top'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
