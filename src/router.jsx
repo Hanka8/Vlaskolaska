@@ -2,6 +2,7 @@ import Intro from './components/Landing/Intro';
 import About from './components/About';
 import Process from './components/Process';
 import Gallery from './components/Gallery';
+import VideoGallery from './components/VideoGallery';
 import Services from './components/Services';
 import Contact from './components/Contact';
 
@@ -19,5 +20,6 @@ export const router = createBrowserRouter([
     { path: "/proces", element: <Process /> },
     { path: "/sluzby", element: <Services /> },
     { path: "/galerie", element: <Gallery /> },
+    { path: "/videa", element: <VideoGallery />},
     { path: "/kontakt", element: <Contact /> }
 ]);
