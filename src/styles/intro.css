@@ -42,6 +42,12 @@
     background-color: var(--logo-background);
     border: 4rem solid var(--logo-background);
     border-radius: 50%;
+    transition: 200ms ease-in-out;
+}
+
+.intro-container:hover {
+    scale: 1.1;
+    transition: 200ms ease-in-out;
 }
 
 @media screen and (max-width: 400px){
