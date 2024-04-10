@@ -342,3 +342,28 @@ a:visited {
 .video-wrapper {
     height: 446px;
 }
+
+.page.contact {
+    background-image: url(../images/general/contact_karolina.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-color: #efe3d7;
+}
+
+.page-content.contact {
+    border-radius: 1rem;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.text.contact {
+    color: var(--custom-brown);
+}
+
+.link-ico:hover {
+    transform: scale(1.2);
+    transition: 200ms;
+}
