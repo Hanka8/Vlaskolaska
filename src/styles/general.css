@@ -163,6 +163,7 @@ a:visited {
     background-position: center;
     background-image: url(../images/bg1.svg);
     background-color: var(--light-brown);
+    padding-right: 200px;
 }
 
 @media screen and (max-width: 768px) {
@@ -174,6 +175,17 @@ a:visited {
 .page-gallery {
     flex-direction: column;
     gap: 0;
+    padding: 0;
+}
+
+.page-gallery .page-content {
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .page-logo {
@@ -181,7 +193,7 @@ a:visited {
 }
 
 .page-logo img {
-    width: 300px;
+    width: 200px;
     height: auto;
     filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.596));
 }

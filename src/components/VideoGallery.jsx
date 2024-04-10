@@ -50,7 +50,7 @@ export default function VideoGallery( {videos} ) {
   return (
     <>
       <SwipeableTemporaryDrawer />
-      <div className='page'>
+      <div className='page page-gallery'>
         <div className='page-logo'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
