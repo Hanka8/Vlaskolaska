@@ -5,6 +5,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { MdAlternateEmail } from "react-icons/md";
 
 export default function Contact() {
+
   return (
     <>
       <SwipeableTemporaryDrawer />
@@ -30,6 +31,7 @@ export default function Contact() {
                 <SlLocationPin size={30}/>
                 <a className='link' href='https://maps.app.goo.gl/CAkFdRvhrEF8vnvq9'>Praha 13</a>
               </div>
+
           </div>
       </div>
     </>

@@ -338,3 +338,7 @@ a:visited {
     rotate: 90deg;
     transition: 500ms;
 }
+
+.video-wrapper {
+    height: 446px;
+}
