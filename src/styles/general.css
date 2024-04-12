@@ -27,6 +27,10 @@ a:visited {
     color: inherit;
 }
 
+li .scrolled {
+    color: var(--light-brown);
+}
+
 .h-1 {
     font-size: 3rem;
     font-weight: 700;
