@@ -48,7 +48,7 @@ export default function Gallery() {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page page-gallery'>
-        <div className='page-logo absolute-top'>
+        <div className='page-logo absolute-foreground'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>

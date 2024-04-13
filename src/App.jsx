@@ -11,8 +11,9 @@ import Contact from './components/Contact'
 //styles
 import './styles/general.css'
 import './styles/intro.css'
-import './styles/index.css'
 import './styles/menu.css'
+import "./styles/gallery.css"
+import "./styles/contact.css"
 
 function App() {
 

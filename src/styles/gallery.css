@@ -1,0 +1,87 @@
+.gallery-nav.scrolled {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
+    backdrop-filter: blur(1rem);
+    transition: background-color 300ms;
+    background-color: var(--custom-brown);
+    position: sticky;
+    margin-bottom: 8rem;
+}
+
+.scrolled .gallery-nav-ul {
+    color: #eefbfc;
+    text-shadow: 0.1rem 0.1rem .24rem var(--text);
+    margin-top: 0;
+}
+
+.scrolled .gallery-nav-ul .gallery-nav-item:hover {
+    color: var(--custom-yellow);
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.gallery-nav {
+    gap: 1rem;
+    inset: 0;
+    z-index: 100;
+    color: var(--text);
+}
+
+.gallery-nav-ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 8rem;
+}
+
+.gallery-nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.gallery-nav-ul .gallery-nav-item:hover {
+    color: var(--custom-brown);
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+    transition: transform 200ms;
+    cursor: pointer;
+    filter: sepia(100%) saturate(80%);
+}
+
+.modal-img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn-close {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--custom-brown);
+    background-image: url("/images/close.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1rem;
+    height: 1rem;
+    z-index: 10;
+    border: .5rem solid transparent;
+    box-sizing: content-box;
+}
+
+.btn-close:hover {
+    rotate: 90deg;
+    transition: 500ms;
+}
+
+.video-wrapper {
+    height: 446px;
+}

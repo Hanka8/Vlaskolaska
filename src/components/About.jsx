@@ -16,7 +16,7 @@ export default function About() {
           <p className='text'>S přibývajícím časem jsem začala dostávat nabídky na úpravu vlasů a make-up od nevěst, což mě nakonec přivedlo k tomu, abych se plně věnovala oboru svatebního stylingu. Tento proces mi přináší radost a energii, a já se těším, že vám mohu pomoci zazářit ve vašem nejkrásnějším dni.</p>
           <p className='text'>S láskou a zaujetím se věnuji práci se svatebními účesy a make-upem, abych vám pomohla cítit se sebevědomě a krásně ve vašem výjimečném dni.</p>
           <h2 className='h-2'>Absolvované kurzy</h2>
-          <ul className='list-undecorated mt-2'>
+          <ul className='mt-2'>
             <li className='text'>Simeona Lanta Akademie účesů: Kurz individual</li>
             <li className='text'>Berenica Zita: Individuální kurz líčení</li>
           </ul>
