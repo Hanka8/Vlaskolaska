@@ -13,9 +13,10 @@
     margin-top: 0;
 }
 
-.scrolled .gallery-nav-ul .gallery-nav-item:hover {
+.scrolled .gallery-nav-ul .gallery-nav-item:hover,
+.scrolled .gallery-nav-item.active {
     color: var(--custom-yellow);
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 200ms;
 }
 
@@ -43,7 +44,8 @@
     flex-wrap: wrap;
 }
 
-.gallery-nav-ul .gallery-nav-item:hover {
+.gallery-nav-ul 
+.gallery-nav-item:hover {
     color: var(--custom-brown);
     transform: scale(1.1);
     transition: 200ms;

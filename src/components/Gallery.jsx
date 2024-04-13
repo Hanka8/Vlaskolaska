@@ -26,52 +26,72 @@ export default function Gallery() {
 
   const [open, setOpen] = React.useState(false);
   const [imageSrc, setImageSrc] = React.useState('');
+  const [scrolled, setScrolled] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState(false);
+
   const handleOpen = (e) => {
     setOpen(true);
     setImageSrc(e.target.src);
     };
-  const handleClose = () => setOpen(false);
 
-  const [scrolled, setScrolled] = React.useState(false);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
-    };
 
+      const sections = document.querySelectorAll('section');
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        // roughly one-third into view
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute('id');
+        }
+        setActiveSection(current)
+      });
+    };
     document.addEventListener('scroll', handleScroll);
 
-  }, [scrolled]);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+
+  }, []);
+
 
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page page-gallery'>
         <div className='page-logo absolute-foreground'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
           <ul className='gallery-nav-ul'>
-            <li className='gallery-nav-item'>
+            <li className={`gallery-nav-item ${activeSection=="pripravy" ? 'active' : ''}`}>
               <a href="#pripravy">Přípravy</a>
             </li>
-            <li className='gallery-nav-item'>
+            <li className={`gallery-nav-item ${activeSection=="nevesty" ? 'active' : ''}`}>
               <a href="#nevesty">Nevěsty</a>
             </li>
-            <li className='gallery-nav-item'>
+            <li className={`gallery-nav-item ${activeSection=="ucesy" ? 'active' : ''}`}>
               <a href="#ucesy">Účesy</a>
             </li>
-            <li className='gallery-nav-item'>
+            <li className={`gallery-nav-item ${activeSection=="makeup" ? 'active' : ''}`}>
               <a href="#makeup">Makeup</a>
             </li>
-            <li className='gallery-nav-item'>
+            <li className={`gallery-nav-item ${activeSection=="doplnky" ? 'active' : ''}`}>
               <a href="#doplnky">Doplňky</a>
             </li>
           </ul>
         </nav>
         <div className='page-content'>
-          <h2 className='h-2 mi-10 pt-6' id="pripravy">Přípravy</h2>	
+          <section className="pt-6" id="pripravy">
+          <h2 className='h-2 mi-10 pt-6'>Přípravy</h2>	
           <ImageList variant="masonry" className='mi-10 mt-2 mb-5' cols={3} gap={35}>
             {pripravy.map((item) => (
               <ImageListItem key={item}>
@@ -100,7 +120,9 @@ export default function Gallery() {
               </ImageListItem>
             ))}
           </ImageList>
-          <h2 className='h-2 mi-10 pt-6' id="nevesty">Nevěsty</h2>
+          </section>
+          <section className="pt-6" id="nevesty">
+          <h2 className='h-2 mi-10 pt-6'>Nevěsty</h2>
           <ImageList variant="masonry" className='mi-10 mt-2' cols={3} gap={35}>
             {ucesy.map((item) => (
               <ImageListItem key={item}>
@@ -113,6 +135,7 @@ export default function Gallery() {
               </ImageListItem>
             ))}
           </ImageList>
+          </section>
         </div>
       </div>
     </>

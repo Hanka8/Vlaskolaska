@@ -12,7 +12,11 @@
 }
 
 .menu-btn:hover {
-  color: var(--custom-brown);
   transform: scale(1.2);
   transition: transform 200ms;
+}
+
+.menu-btn.scrolled {
+  top: 0;
+  filter: invert(98%) sepia(150%);
 }
