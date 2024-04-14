@@ -4,6 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import { BsInstagram } from "react-icons/bs";
 
 // creating arrays of numbers because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
@@ -38,7 +39,7 @@ export default function Gallery() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
+      const isScrolled = window.scrollY > 170;
       setScrolled(isScrolled);
 
       const sections = document.querySelectorAll('section');
@@ -65,12 +66,14 @@ export default function Gallery() {
 
   return (
     <>
-      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page page-gallery'>
-        <div className='page-logo absolute-foreground'>
+        <div className='page-logo logo-gallery'>
               <img src="images/gallery.svg" alt="galerie"/>
         </div>
         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
+          <a className={`nav-ig ${scrolled ? 'scrolled' : ''}`}  href="https://www.instagram.com/vlaskolaska/">
+            <BsInstagram className={`ig-svg ${scrolled ? 'scrolled' : ''}`} />
+          </a>
           <ul className='gallery-nav-ul'>
             <li className={`gallery-nav-item ${activeSection=="pripravy" ? 'active' : ''}`}>
               <a href="#pripravy">Přípravy</a>
@@ -88,6 +91,7 @@ export default function Gallery() {
               <a href="#doplnky">Doplňky</a>
             </li>
           </ul>
+          <SwipeableTemporaryDrawer scrolled={scrolled} gallery={true} />
         </nav>
         <div className='page-content'>
           <section className="pt-6" id="pripravy">

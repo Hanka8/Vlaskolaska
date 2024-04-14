@@ -1,54 +1,71 @@
-.gallery-nav.scrolled {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
-    backdrop-filter: blur(1rem);
-    transition: background-color 300ms;
-    background-color: var(--custom-brown);
-    position: sticky;
-    margin-bottom: 8rem;
-}
-
-.scrolled .gallery-nav-ul {
-    color: #eefbfc;
-    text-shadow: 0.1rem 0.1rem .24rem var(--text);
-    margin-top: 0;
-}
-
-.scrolled .gallery-nav-ul .gallery-nav-item:hover,
-.scrolled .gallery-nav-item.active {
-    color: var(--custom-yellow);
-    transform: scale(1.2);
-    transition: 200ms;
+.logo-gallery {
+    align-self: center;
 }
 
 .gallery-nav {
+    backdrop-filter: blur(1rem);
+    transition: background-color 300ms;
+    position: sticky;
     gap: 1rem;
     inset: 0;
     z-index: 100;
     color: var(--text);
 }
 
-.gallery-nav-ul {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 8rem;
+.gallery-nav.scrolled {
+    background-color: var(--custom-brown);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
 }
 
 .gallery-nav-ul {
+    color: var(--custom-brown);
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.gallery-nav-ul 
+.scrolled .gallery-nav-ul  {
+    color: #eefbfc;
+    text-shadow: 0.1rem 0.1rem .24rem var(--text);
+}
+
 .gallery-nav-item:hover {
-    color: var(--custom-brown);
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 200ms;
+}
+
+.scrolled .gallery-nav-item:hover,
+.scrolled .gallery-nav-item.active {
+    color: var(--custom-yellow);
+}
+
+.nav-ig {
+    padding: 10px;
+    padding-top: 13px;
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    width: fit-content;   
+}
+
+.ig-svg {
+    fill: var(--custom-brown);
+    width: 1.8rem;
+    height: 1.9rem;
+    margin-left: 2rem;
+}
+
+.ig-svg.scrolled {
+    fill: #eefbfcff;
+}
+
+.ig-svg:hover {
+    transform: scale(1.2);
+    transition: 300ms;
 }
 
 .gallery-img:hover {

@@ -124,11 +124,6 @@ ul {
     color: #efe3d7;
 }
 
-.absolute-foreground {
-    position: absolute;
-    z-index: 999;
-}
-
 .pt-6 {
     padding-top: 6rem;
 }

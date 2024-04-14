@@ -11,12 +11,16 @@
   transition: transform 200ms;
 }
 
+.menu-btn.gallery {
+  top: 0;
+}
+
 .menu-btn:hover {
   transform: scale(1.2);
   transition: transform 200ms;
 }
 
 .menu-btn.scrolled {
+  padding-top: 8px;
   top: 0;
-  filter: invert(98%) sepia(150%);
 }
