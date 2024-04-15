@@ -6,9 +6,10 @@ export default function Services() {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page'>
-        <div className='page-logo'>
+        <h1 className='page-logo'>
           <img src="images/pricelist.svg" alt="ceník" />
-        </div>
+          <span className='visually-hidden'>služby a ceník</span>
+        </h1>
         <div className='page-content'>
           <div className='content-flex'>
               <div>

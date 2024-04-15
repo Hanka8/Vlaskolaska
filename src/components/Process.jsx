@@ -7,9 +7,10 @@ export default function Process() {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page pr-6'>
-        <div className='page-logo'>
+        <h1 className='page-logo'>
           <img src="images/process.svg" alt="průvodce procesem" />
-        </div>
+          <span className='visually-hidden'>proces</span>
+        </h1>
         <div className='page-content'>
           <h2 className='h-2'>První krok</h2>
           <p className='text'>Neváhejte se na mě obrátit s dotazy ohledně volného termínu. Můžete mi zavolat nebo napsat na e-mail, který najdete v sekci 

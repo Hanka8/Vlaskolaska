@@ -7,9 +7,10 @@ export default function About() {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page pr-6'>
-        <div className='page-logo'>
+        <h1 className='page-logo'>
           <img src="images/about.svg" alt="o mně" />
-        </div>
+          <span className='visually-hidden'>o mně</span>
+        </h1>
         <div className='page-content'>
           <p className='text'>Jmenuji se Karolína a pocházím ze Šternberka u Olomouce. Nyní žiji a působím v Praze. Můj zájem o svatby se začal projevovat již na střední škole, avšak mé akademické vzdělání směřovalo jiným směrem, a proto jsem se rozhodla věnovat svou kariéru Armádě České republiky.</p>
           <p className='text'>Přestože jsem pracovala v odlišném prostředí, mé srdce vždy zůstávalo spojeno se světem svateb. Ve svém volném čase jsem se věnovala pečení dortů, což postupně přerostlo do vášně pro svatební dorty. Mimo to jsem se také začala věnovat úpravám vlasů svých přátel, a to s velkým zápalem a pozorností k detailům.</p>

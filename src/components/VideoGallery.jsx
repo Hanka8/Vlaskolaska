@@ -51,13 +51,13 @@ export default function VideoGallery( {videos} ) {
     <>
       <SwipeableTemporaryDrawer />
       <div className='page page-gallery'>
-        <div className='page-logo'>
+        <h1 className='page-logo logo-gallery'>
               <img src="images/gallery.svg" alt="galerie"/>
-        </div>
+              <span className='visually-hidden'>galerie</span>
+        </h1>
         <div className='page-content'>
-
-      <Box sx={{ width: "50vw", height: "fit-content", overflowY: 'hidden' }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "10rem" }}>
+      <ImageList variant="masonry" cols={3} gap={35}>
         {itemData.map((item, index) => (
           <ImageListItem
             key={item.img}

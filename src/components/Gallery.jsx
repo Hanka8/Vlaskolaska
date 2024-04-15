@@ -67,9 +67,10 @@ export default function Gallery() {
   return (
     <>
       <div className='page page-gallery'>
-        <div className='page-logo logo-gallery'>
+        <h1 className='page-logo logo-gallery'>
               <img src="images/gallery.svg" alt="galerie"/>
-        </div>
+              <span className='visually-hidden'>galerie</span>
+        </h1>
         <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
           <a className={`nav-ig ${scrolled ? 'scrolled' : ''}`}  href="https://www.instagram.com/vlaskolaska/">
             <BsInstagram className={`ig-svg ${scrolled ? 'scrolled' : ''}`} />

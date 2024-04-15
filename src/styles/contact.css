@@ -1,6 +1,5 @@
 .contacts-flex {
     font-size: 1.5rem;
-    color: var(--custom-brown);
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
@@ -15,6 +14,8 @@
     background-repeat: no-repeat;
     background-position: center right;
     background-color: #efe3d7;
+    color: var(--custom-brown);
+    padding-bottom: 0;
 }
 
 .page-content.contact {
@@ -29,7 +30,15 @@
     color: var(--custom-brown);
 }
 
-.link-ico:hover {
+.hover-scale:hover {
     transform: scale(1.2);
     transition: 200ms;
+}
+
+.recommendations-section {
+    margin-top: 8rem;
+    border-top: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }

@@ -18,6 +18,7 @@
 }
 
 .gallery-nav-ul {
+    border: 1px solid var(--text);
     color: var(--custom-brown);
     list-style: none;
     display: flex;
@@ -31,6 +32,7 @@
 .scrolled .gallery-nav-ul  {
     color: #eefbfc;
     text-shadow: 0.1rem 0.1rem .24rem var(--text);
+    border: none;
 }
 
 .gallery-nav-item:hover {
@@ -45,7 +47,7 @@
 
 .nav-ig {
     padding: 10px;
-    padding-top: 13px;
+    padding-top: 10px;
     position: absolute;
     inset: 0;
     z-index: 999;
@@ -102,5 +104,5 @@
 }
 
 .video-wrapper {
-    height: 446px;
+    height: 44.5vw;
 }
