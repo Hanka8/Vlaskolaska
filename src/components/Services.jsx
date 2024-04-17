@@ -1,16 +1,20 @@
 import React from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
+import UseScroll from './hooks/UseScroll'
 
 export default function Services() {
+
+  const scrolled = UseScroll();
+
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page'>
-        <h1 className='page-logo'>
+        <h1 className='page-logo services'>
           <img src="images/pricelist.svg" alt="ceník" />
           <span className='visually-hidden'>služby a ceník</span>
         </h1>
-        <div className='page-content'>
+        <div className='page-content w-100'>
           <div className='content-flex'>
               <div>
                   <h2 className='h-2 underline-centered'>Zkouška</h2>

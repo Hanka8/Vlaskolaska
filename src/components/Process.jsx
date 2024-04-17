@@ -1,11 +1,15 @@
 import React from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import { Link } from 'react-router-dom'
+import UseScroll from './hooks/UseScroll'
 
 export default function Process() {
+
+  const scrolled = UseScroll();
+
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page'>
         <h1 className='page-logo'>
           <img src="images/process.svg" alt="průvodce procesem" />

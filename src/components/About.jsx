@@ -1,23 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
+import UseScroll from './hooks/UseScroll';
 
 export default function About( ) {
 
-  const [scrolled, setScrolled] = useState(false);
-
-  function handleScroll() {
-    if (window.scrollY > 170) {
-      console.log(window.scrollY);
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scrolled = UseScroll();
 
   return (
     <>
