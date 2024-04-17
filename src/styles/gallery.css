@@ -12,7 +12,7 @@
     color: var(--text);
 }
 
-.gallery-nav.scrolled {
+.gallery-nav.scrolled-menu {
     background-color: var(--custom-brown);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
 }
@@ -29,7 +29,7 @@
     padding-bottom: 1rem;
 }
 
-.scrolled .gallery-nav-ul  {
+.scrolled-menu .gallery-nav-ul  {
     color: #eefbfc;
     text-shadow: 0.1rem 0.1rem .24rem var(--text);
     border: none;
@@ -40,8 +40,8 @@
     transition: 200ms;
 }
 
-.scrolled .gallery-nav-item:hover,
-.scrolled .gallery-nav-item.active {
+.scrolled-menu .gallery-nav-item:hover,
+.scrolled-menu .gallery-nav-item.active {
     color: var(--custom-yellow);
 }
 
@@ -61,7 +61,7 @@
     margin-left: 2rem;
 }
 
-.ig-svg.scrolled {
+.ig-svg.scrolled-menu {
     fill: #eefbfcff;
 }
 

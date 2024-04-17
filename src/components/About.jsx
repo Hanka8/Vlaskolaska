@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 
-export default function About() {
+export default function About( ) {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  function handleScroll() {
+    if (window.scrollY > 170) {
+      console.log(window.scrollY);
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page'>
         <h1 className='page-logo'>
           <img src="images/about.svg" alt="o mně" />

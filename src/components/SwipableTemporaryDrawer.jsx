@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuButton from './Landing/MenuButton';
 import { Link } from 'react-router-dom'
 
-export default function SwipeableTemporaryDrawer({scrolled, gallery}) {
+export default function SwipeableTemporaryDrawer({scrolledMenu, gallery, scrolled}) {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -53,7 +53,7 @@ export default function SwipeableTemporaryDrawer({scrolled, gallery}) {
     <div>
         <React.Fragment key={"right"}>
           {/* <Button onClick={toggleDrawer("right", true)}>{"right"}</Button> */}
-          <MenuButton toggleDrawer={toggleDrawer} drawerOpen={state["right"]} scrolled={scrolled} gallery={gallery}/>
+          <MenuButton toggleDrawer={toggleDrawer} drawerOpen={state["right"]} scrolledMenu={scrolledMenu} gallery={gallery} scrolled={scrolled}/>
           <SwipeableDrawer
             anchor={"right"}
             open={state["right"]}

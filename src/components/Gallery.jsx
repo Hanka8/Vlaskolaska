@@ -27,7 +27,7 @@ export default function Gallery() {
 
   const [open, setOpen] = React.useState(false);
   const [imageSrc, setImageSrc] = React.useState('');
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolledMenu, setScrolledMenu] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState(false);
 
   const handleOpen = (e) => {
@@ -40,7 +40,7 @@ export default function Gallery() {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 170;
-      setScrolled(isScrolled);
+      setScrolledMenu(isScrolled);
 
       const sections = document.querySelectorAll('section');
       let current = '';
@@ -71,9 +71,9 @@ export default function Gallery() {
               <img src="images/gallery.svg" alt="galerie"/>
               <span className='visually-hidden'>galerie</span>
         </h1>
-        <nav className={`gallery-nav ${scrolled ? 'scrolled' : ''}`}>
-          <a className={`nav-ig ${scrolled ? 'scrolled' : ''}`}  href="https://www.instagram.com/vlaskolaska/">
-            <BsInstagram className={`ig-svg ${scrolled ? 'scrolled' : ''}`} />
+        <nav className={`gallery-nav ${scrolledMenu ? 'scrolled-menu' : ''}`}>
+          <a className={`nav-ig ${scrolledMenu ? 'scrolled-menu' : ''}`}  href="https://www.instagram.com/vlaskolaska/">
+            <BsInstagram className={`ig-svg ${scrolledMenu ? 'scrolled-menu' : ''}`} />
           </a>
           <ul className='gallery-nav-ul'>
             <li className={`gallery-nav-item ${activeSection=="pripravy" ? 'active' : ''}`}>
@@ -92,7 +92,7 @@ export default function Gallery() {
               <a href="#doplnky">Doplňky</a>
             </li>
           </ul>
-          <SwipeableTemporaryDrawer scrolled={scrolled} gallery={true} />
+          <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
         <div className='page-content'>
           <section className="pt-6" id="pripravy">
