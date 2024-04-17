@@ -160,6 +160,14 @@ ul {
     margin-inline: 10rem;
 }
 
+.mi-5 {
+    margin-inline: 5rem;
+}
+
+.mi-2 {
+    margin-inline: 2rem;
+}
+
 .w-100 {
     width: 100%;
 }
@@ -250,7 +258,6 @@ ul {
     }
 }
 
-
 .page-logo img {
     width: 200px;
     height: auto;
@@ -262,7 +269,7 @@ ul {
 }
 
 @media screen and (max-width: 1000px) {
-    .page-content {
+    .page-content:not(.gallery) {
         margin-left: 32px;
     }
 }

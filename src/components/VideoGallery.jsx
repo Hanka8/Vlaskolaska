@@ -55,7 +55,7 @@ export default function VideoGallery( {videos} ) {
               <img src="images/gallery.svg" alt="galerie"/>
               <span className='visually-hidden'>galerie</span>
         </h1>
-        <div className='page-content'>
+        <div className='page-content gallery'>
       <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "10rem" }}>
       <ImageList variant="masonry" cols={3} gap={35}>
         {itemData.map((item, index) => (

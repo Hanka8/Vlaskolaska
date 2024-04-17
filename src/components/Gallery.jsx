@@ -5,6 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import { BsInstagram } from "react-icons/bs";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // creating arrays of numbers because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
@@ -24,6 +25,10 @@ const style = {
 };
 
 export default function Gallery() {
+
+  const isUnder1000screen = useMediaQuery('(max-width:1000px)');
+  const isUnder700screen = useMediaQuery('(max-width:700px)');
+  const isUnder500screen = useMediaQuery('(max-width:500px)');
 
   const [open, setOpen] = React.useState(false);
   const [imageSrc, setImageSrc] = React.useState('');
@@ -94,10 +99,13 @@ export default function Gallery() {
           </ul>
           <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
-        <div className='page-content'>
+        <div className='page-content gallery'>
           <section className="pt-6" id="pripravy">
-          <h2 className='h-2 mi-10 pt-6'>Přípravy</h2>	
-          <ImageList variant="masonry" className='mi-10 mt-2 mb-5' cols={3} gap={35}>
+          <h2 className={`h-2 ${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} pt-6'`}>Přípravy</h2>
+          <ImageList variant="masonry" 
+              className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
+              cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3} 
+              gap={35}>
             {pripravy.map((item) => (
               <ImageListItem key={item}>
                 <img 
@@ -115,7 +123,6 @@ export default function Gallery() {
                   aria-describedby="modal-modal-description"
                 >
                   <Box sx={style}>
-                    
                     <picture className='modal-picture'>
                       <img className='modal-img' src={imageSrc} alt="modal" />
                     </picture>
