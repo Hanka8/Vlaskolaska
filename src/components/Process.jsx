@@ -6,7 +6,7 @@ export default function Process() {
   return (
     <>
       <SwipeableTemporaryDrawer />
-      <div className='page pr-6'>
+      <div className='page'>
         <h1 className='page-logo'>
           <img src="images/process.svg" alt="průvodce procesem" />
           <span className='visually-hidden'>proces</span>

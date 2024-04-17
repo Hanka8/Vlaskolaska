@@ -1,4 +1,3 @@
-
 :root {
     --logo-background: #ffffff;
     --custom-brown: #805f46ff;
@@ -128,10 +127,6 @@ ul {
     padding-top: 6rem;
 }
 
-.pr-6 {
-    padding-right: 6rem;
-}
-
 .mt-2 {
     margin-top: 2rem;
 }
@@ -168,21 +163,34 @@ ul {
 .page {
     display: flex;
     justify-content: flex-start;
-    align-items: top;
-    gap: 4rem;
+    gap: 32px;
     min-height: 100dvh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url(../images/bg1.svg);
     background-color: var(--light-brown);
-    padding-right: 200px;
     padding-bottom: 4rem;
+    padding-right: 8rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .page {
+        flex-direction: column;
+        padding-right: 32px;
+        gap: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .page {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .page {
+        padding-right: 16px;
     }
 }
 
@@ -195,7 +203,6 @@ ul {
 .page-gallery .page-content {
     margin-top: 0;
     padding: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +210,15 @@ ul {
 }
 
 .page-logo {
-    margin: 2rem;
+    margin-top: 3rem;
+    margin-left: 32px;
+}
+
+@media screen and (max-width: 350px) {
+    .page-logo {
+        margin-top: 2rem;
+        margin-left: 16px;
+    }
 }
 
 .page-logo img {
@@ -214,13 +229,31 @@ ul {
 
 .page-content {
     margin-top: 3rem;
-    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .page-content {
+        margin-left: 32px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .page-content {
+        margin-left: 16px;
+    }
 }
 
 .page-picture img {
+    margin-top: 2rem;
     width: 30%;
     height: auto;
     filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.596));
+}
+
+@media screen and (max-width: 1000px) {
+    .page-picture img {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 768px) {
