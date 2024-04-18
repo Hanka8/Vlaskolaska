@@ -5,8 +5,6 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-//https://www.freeconvert.com/mov-to-mp4/download zbytek videí limit byl 20
-
 const itemData = [
   {
     img: 'videos/thumbnails/3.png',
