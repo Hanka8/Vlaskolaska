@@ -71,8 +71,8 @@ export default function Gallery() {
 
   return (
     <>
-      <div className='page page-gallery'>
-        <h1 className='page-logo logo-gallery'>
+      <div className={`page page-gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
+        <h1 className={`page-logo logo-gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
               <img src="images/gallery.svg" alt="galerie"/>
               <span className='visually-hidden'>galerie</span>
         </h1>
@@ -99,7 +99,7 @@ export default function Gallery() {
           </ul>
           <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
-        <div className='page-content gallery'>
+        <div className={`page-content gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
           <section className="pt-6" id="pripravy">
           <h2 className={`h-2 ${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} pt-6'`}>Přípravy</h2>
           <ImageList variant="masonry" 

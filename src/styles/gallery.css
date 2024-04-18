@@ -1,5 +1,35 @@
+:root {
+    --nav-text: #eefbfc;
+}
+
+@media screen and (max-width: 600px) {
+    .page-gallery.scrolled-menu::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: var(--nav-text);
+        width: 100%;
+        height: 80px;
+    }
+}
+
 .logo-gallery {
     align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    .logo-gallery.scrolled-menu {
+        position: sticky;
+        inset: 0;
+        top: 5px;
+        margin: 0;
+        z-index: 99;
+    }
+
+    .logo-gallery.scrolled-menu img {
+        width: 90px;
+    }
+    
 }
 
 .gallery-nav {
@@ -17,6 +47,12 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.929);
 }
 
+@media screen and (max-width: 600px) {
+    .gallery-nav.scrolled-menu {
+        top: 56px;
+    }
+}
+
 .gallery-nav-ul {
     border: 1px solid var(--text);
     color: var(--custom-brown);
@@ -30,7 +66,7 @@
 }
 
 .scrolled-menu .gallery-nav-ul  {
-    color: #eefbfc;
+    color: var(--nav-text);
     text-shadow: 0.1rem 0.1rem .24rem var(--text);
     border: none;
 }
@@ -54,6 +90,21 @@
     width: fit-content;   
 }
 
+@media screen and (max-width: 600px) {
+    .nav-ig {
+        top: -100px;
+        left: 12.5vw;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-ig.scrolled-menu {
+        padding: 0;
+    }
+    
+}
+
 .ig-svg {
     fill: var(--custom-brown);
     width: 1.8rem;
@@ -65,9 +116,26 @@
     fill: #eefbfcff;
 }
 
+@media screen and (max-width: 600px){
+    .ig-svg {
+        margin-left: 0;
+    }
+
+    .ig-svg.scrolled-menu {
+        fill: var(--custom-brown);
+        position: sticky;
+        top: 15px;
+        margin-left: 0;
+    }
+}
+
 .ig-svg:hover {
     transform: scale(1.2);
     transition: 300ms;
+}
+
+.page-content.gallery.scrolled-menu {
+    padding-top: 10rem;
 }
 
 .gallery-img:hover {

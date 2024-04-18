@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function UseScroll() {
+export default function UseScroll() {
   const [scrolled, setScrolled] = useState(false);
 
   function handleScroll() {
@@ -14,9 +14,8 @@ function UseScroll() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+    
   }, [window.scrollY]);
 
   return scrolled;
 }
-
-export default UseScroll;

@@ -44,9 +44,22 @@
   top: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .menu-btn.gallery {
+    top: -100px;
+    right: 12.5vw;
+  }
+}
+
 .menu-btn.gallery.scrolled-menu {
   padding-top: 8px;
   top: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-btn.gallery.scrolled-menu {
+    top: -55px;
+  }
 }
 
 .menu-btn:hover {
