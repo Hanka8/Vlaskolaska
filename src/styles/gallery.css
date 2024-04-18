@@ -14,6 +14,12 @@
     }
 }
 
+@media screen and (max-width: 600px) and (-moz-device-pixel-ratio: 2) {
+    .page-gallery.scrolled-menu::after {
+            height: 160px;
+        }
+}
+
 .logo-gallery {
     align-self: center;
     margin-left: 0;
