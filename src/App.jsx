@@ -17,18 +17,18 @@ import './styles/menu.css';
 import "./styles/gallery.css";
 import "./styles/contact.css";
 
+const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Intro />} />
-        <Route path="/omne" element={<About />} />
-        <Route path="/proces" element={<Process />} />
-        <Route path="/sluzby" element={<Services />} />
-        <Route path="/galerie" element={<Gallery />} />
-        <Route path="/videa" element={<VideoGallery />} />
-        <Route path="/kontakt" element={<Contact />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Intro />} />
+      <Route path="/o-mne" element={<About />} />
+      <Route path="/proces" element={<Process />} />
+      <Route path="/galerie" element={<Gallery />} />
+      <Route path="/videa" element={<VideoGallery />} />
+      <Route path="/sluzby" element={<Services />} />
+      <Route path="/kontakt" element={<Contact />} />
+    </Routes>
   );
+}
 
 export default App;
