@@ -15,6 +15,7 @@
 
 .logo-gallery {
     align-self: center;
+    margin-left: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -30,6 +31,12 @@
         width: 90px;
     }
     
+}
+
+@media screen and (max-width: 330px) {
+    .logo-gallery img {
+        width: 150px;
+    }
 }
 
 .gallery-nav {
@@ -61,8 +68,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
 }
 
 .scrolled-menu .gallery-nav-ul  {
@@ -95,6 +101,12 @@
         top: -100px;
         left: 12.5vw;
         z-index: -1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav-ig {
+        left: 1rem;
     }
 }
 
