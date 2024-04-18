@@ -9,7 +9,7 @@
 }
 
 .page.contact {
-    background-image: url(../images/general/contact_karolina.png);
+    background-image: url(../images/contact.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
@@ -18,12 +18,21 @@
     padding-bottom: 0;
 }
 
+@media screen and (max-width: 1000px) {
+    .page.contact {
+        background-size: 45%;
+        background-position: bottom right;
+    }
+    
+}
+
 .page-content.contact {
     border-radius: 1rem;
     width: fit-content;
     height: fit-content;
     margin-top: 2rem;
     padding: 2rem;
+    margin-left: 0;
 }
 
 .text.contact {

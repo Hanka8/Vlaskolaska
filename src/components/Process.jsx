@@ -15,7 +15,7 @@ export default function Process() {
           <img src="images/process.svg" alt="průvodce procesem" />
           <span className='visually-hidden'>proces</span>
         </h1>
-        <div className='page-content'>
+        <div className='page-content process'>
           <h2 className='h-2'>První krok</h2>
           <p className='text'>Neváhejte se na mě obrátit s dotazy ohledně volného termínu. Můžete mi zavolat nebo napsat na e-mail, který najdete v sekci 
             <Link to="/kontakt" style={{textDecoration: "none", color: "inherit", marginLeft:".25rem"}}>

@@ -103,10 +103,17 @@ ul {
     font-size: 1.7rem;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
     .big {
         font-size: 1.25rem;
     }
+}
+
+@media screen and (max-width: 370px) {
+    .big.contact {
+        font-size: 1rem;
+    }
+    
 }
 
 .emphasized {
@@ -270,7 +277,7 @@ ul {
 }
 
 @media screen and (max-width: 1000px) {
-    .page-content:not(.gallery) {
+    .page-content.about, .page-content.process {
         margin-left: 32px;
     }
 }

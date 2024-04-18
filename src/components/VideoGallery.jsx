@@ -3,6 +3,7 @@ import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 //https://www.freeconvert.com/mov-to-mp4/download zbytek videí limit byl 20
 
@@ -37,6 +38,10 @@ const itemData = [
 
 export default function VideoGallery( {videos} ) {
 
+  const isUnder1000screen = useMediaQuery('(max-width:1000px)');
+  const isUnder700screen = useMediaQuery('(max-width:700px)');
+  const isUnder500screen = useMediaQuery('(max-width:500px)');
+
   const [hoveredVideo, setHoveredVideo] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -56,8 +61,12 @@ export default function VideoGallery( {videos} ) {
               <span className='visually-hidden'>galerie</span>
         </h1>
         <div className='page-content gallery'>
-      <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "10rem" }}>
-      <ImageList variant="masonry" cols={3} gap={35}>
+      <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "0" }}>
+      <ImageList
+        className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
+        variant="masonry" 
+        cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3}  
+        gap={35}>
         {itemData.map((item, index) => (
           <ImageListItem
             key={item.img}
