@@ -213,6 +213,10 @@ ul {
         padding-right: 32px;
         gap: 0;
     }
+
+    .page.services {
+        padding-left: 32px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -224,6 +228,10 @@ ul {
 @media screen and (max-width: 350px) {
     .page {
         padding-right: 16px;
+    }
+
+    .page.services {
+        padding-left: 16px;
     }
 }
 
@@ -286,6 +294,10 @@ ul {
     .page-content {
         margin-left: 16px;
     }
+
+    .page-content.services {
+        margin-left: 0;
+    }
 }
 
 .page-picture img {
@@ -328,15 +340,15 @@ ul {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .content-banner {
         margin-right: 1rem;
     }
-}
+} */
 
 .content-grid {
     display: grid;
