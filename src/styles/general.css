@@ -241,6 +241,12 @@ ul {
     padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+    .page-gallery section {
+        padding-top: 8rem;
+    }
+}
+
 .page-gallery .page-content {
     margin-top: 0;
     padding: 0;

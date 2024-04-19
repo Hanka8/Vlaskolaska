@@ -28,6 +28,7 @@ export default function Gallery() {
 
   const isUnder1000screen = useMediaQuery('(max-width:1000px)');
   const isUnder700screen = useMediaQuery('(max-width:700px)');
+  const isUnder600screen = useMediaQuery("(max-width:600px)");
   const isUnder500screen = useMediaQuery('(max-width:500px)');
 
   const [open, setOpen] = React.useState(false);
@@ -44,7 +45,7 @@ export default function Gallery() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 170;
+      const isScrolled = window.scrollY > (isUnder600screen ? 80 : 170);
       setScrolledMenu(isScrolled);
 
       const sections = document.querySelectorAll('section');

@@ -161,8 +161,10 @@
     transition: 300ms;
 }
 
-.page-content.gallery.scrolled-menu {
-    padding-top: 10rem;
+@media screen and (max-width:600px) {
+    .page-content.gallery.scrolled-menu {
+        padding-top: 8rem;
+    }
 }
 
 .gallery-img:hover {
