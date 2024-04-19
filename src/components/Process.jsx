@@ -11,7 +11,7 @@ export default function Process() {
     <>
       <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page'>
-        <h1 className='page-logo'>
+        <h1 className='page-logo pr-1'>
           <img src="images/process.svg" alt="průvodce procesem" />
           <span className='visually-hidden'>proces</span>
         </h1>

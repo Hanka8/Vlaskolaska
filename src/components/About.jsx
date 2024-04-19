@@ -10,7 +10,7 @@ export default function About( ) {
     <>
       <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page'>
-        <h1 className='page-logo'>
+        <h1 className='page-logo pr-1'>
           <img src="images/about.svg" alt="o mně" />
           <span className='visually-hidden'>o mně</span>
         </h1>
