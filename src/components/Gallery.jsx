@@ -1,47 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
 import { BsInstagram } from "react-icons/bs";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import GallerySection from './GallerySection';
 
 // creating arrays of numbers because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
-const ucesy = Array.from(Array(21).keys(), (i) => i + 1);
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  border: 'none',
-  outline: 'none',
-  width: "80vw",
-  height: "90vh",
-  bgcolor: 'transparent',
-  p: 0,
-};
+const nevesty = Array.from(Array(21).keys(), (i) => i + 1);
+const ucesy = Array.from(Array(29).keys(), (i) => i + 1);
+const makeup = Array.from(Array(10).keys(), i => i + 1);
+const doplnky = Array.from (Array(22).keys(), i => i + 1);
 
 export default function Gallery() {
 
-  const isUnder1000screen = useMediaQuery('(max-width:1000px)');
-  const isUnder700screen = useMediaQuery('(max-width:700px)');
   const isUnder600screen = useMediaQuery("(max-width:600px)");
-  const isUnder500screen = useMediaQuery('(max-width:500px)');
 
-  const [open, setOpen] = React.useState(false);
-  const [imageSrc, setImageSrc] = React.useState('');
   const [scrolledMenu, setScrolledMenu] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState(false);
-
-  const handleOpen = (e) => {
-    setOpen(true);
-    setImageSrc(e.target.src);
-    };
-
-  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +43,6 @@ export default function Gallery() {
     };
 
   }, []);
-
 
   return (
     <>
@@ -101,54 +75,42 @@ export default function Gallery() {
           <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
         <div className={`page-content gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
-          <section className="pt-6" id="pripravy">
-          <h2 className={`h-2 ${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} pt-6'`}>Přípravy</h2>
-          <ImageList variant="masonry" 
-              className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
-              cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3} 
-              gap={35}>
-            {pripravy.map((item) => (
-              <ImageListItem key={item}>
-                <img 
-                  className='gallery-img'
-                  onClick={handleOpen}
-                  srcSet={`images/pripravy/${item}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  src={`images/pripravy/${item}.webp?w=248&fit=crop&auto=format`}
-                  alt={item}
-                  loading="lazy"
-                />
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                    <picture className='modal-picture'>
-                      <img className='modal-img' src={imageSrc} alt="modal" />
-                    </picture>
-                    <button className='btn-close' onClick={handleClose}></button>
-                  </Box>
-                </Modal>
-              </ImageListItem>
-            ))}
-          </ImageList>
-          </section>
-          <section className="pt-6" id="nevesty">
-          <h2 className='h-2 mi-10 pt-6'>Nevěsty</h2>
-          <ImageList variant="masonry" className='mi-10 mt-2' cols={3} gap={35}>
-            {ucesy.map((item) => (
-              <ImageListItem key={item}>
-                <img
-                  srcSet={`images/nevesty/${item}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  src={`images/nevesty/${item}.webp?w=248&fit=crop&auto=format`}
-                  alt={item}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-          </section>
+          
+          <GallerySection 
+            numberOfImages = {32}
+            heading = {"Přípravy"}
+            sourceFolder = {"pripravy"}
+            id = {"pripravy"}
+          />
+
+          <GallerySection
+            numberOfImages = {21}
+            heading = {"Nevěsty"}
+            sourceFolder = {"nevesty"}
+            id = {"nevesty"}
+          />
+
+          <GallerySection
+            numberOfImages = {29}
+            heading = {"Účesy"}
+            sourceFolder = {"ucesy"}
+            id = {"ucesy"}
+          />
+
+          <GallerySection 
+            numberOfImages = {10}
+            heading = {"Makeup"}
+            sourceFolder = {"makeup"}
+            id = {"makeup"}
+          />
+
+          <GallerySection
+            numberOfImages = {22}
+            heading = {"Doplňky"}
+            sourceFolder = {"doplnky"}
+            id = {"doplnky"}
+          />
+
         </div>
       </div>
     </>
