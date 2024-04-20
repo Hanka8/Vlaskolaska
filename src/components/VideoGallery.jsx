@@ -5,34 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-const itemData = [
-  {
-    img: 'videos/thumbnails/3.png',
-    video: 'videos/3.mp4',
-  },
-  {
-    img: 'videos/thumbnails/4.png',
-    video: 'videos/4.mp4',
-  },
-  {
-    img: 'videos/thumbnails/5.png',
-    video: 'videos/5.mp4',
-  },
-  {
-    img: 'videos/thumbnails/6.png',
-    video: 'videos/6.mp4',
-  },
-  {
-    img: 'videos/thumbnails/7.png',
-    video: 'videos/7.mp4',
-  },
-  {
-    img: 'videos/thumbnails/8.png',
-    video: 'videos/8.mp4',
-  },
-
-  // Add more items as needed
-];
+const numberOfVideos = Array.from(Array(33).keys(), i => i + 1);
 
 export default function VideoGallery( {videos} ) {
 
@@ -59,44 +32,43 @@ export default function VideoGallery( {videos} ) {
               <span className='visually-hidden'>galerie</span>
         </h1>
         <div className='page-content gallery'>
-      <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "0" }}>
-      <ImageList
-        className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
-        variant="masonry" 
-        cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3}  
-        gap={35}>
-        {itemData.map((item, index) => (
-          <ImageListItem
-            key={item.img}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            {hoveredVideo === index ? (
-              <div className='video-wrapper'>
-                <video
-                  src={item.video}
-                  controls
-                  autoPlay
-                  loop
-                  muted
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-            ) : (
-              <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={"uces"}
-       
-              />
-            )}
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </Box>
-
-        </div>
+          <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "0" }}>
+          <ImageList
+            className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
+            variant="masonry" 
+            cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3}  
+            gap={35}>
+            {numberOfVideos.map((num) => (
+              <ImageListItem
+                key={num}
+                onMouseEnter={() => handleMouseEnter(num)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {hoveredVideo === num ? (
+                  <div className='video-wrapper'>
+                    <video
+                      src={`videos/${num}.mp4`}
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+                ) : (
+                  <img
+                    srcSet={`videos/thumbnails/${num}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`videos/thumbnails/${num}.webp?w=248&fit=crop&auto=format`}
+                    alt={"uces"}
+          
+                  />
+                )}
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
       </div>
-    </>
+    </div>
+  </>
   )
 }
