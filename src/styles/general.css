@@ -357,15 +357,8 @@ ul {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    /* margin-right: 2rem; */
     margin-bottom: 2rem;
 }
-
-/* @media screen and (max-width: 768px) {
-    .content-banner {
-        margin-right: 1rem;
-    }
-} */
 
 .content-grid {
     display: grid;
@@ -381,4 +374,3 @@ ul {
         grid-template-columns: 1fr;
     }
 }
-

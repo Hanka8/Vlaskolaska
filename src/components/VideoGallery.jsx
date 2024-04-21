@@ -61,7 +61,7 @@ export default function VideoGallery( {videos} ) {
                 <button className={`play-btn ${startPlay == num ? "hidden" : ""}`} 
                     onClick={() => handleMouseClick(num)}
                 >
-                  <IoPlayCircleOutline className='play-ico' size="5vw" color="#f9e7cfff" />
+                  <IoPlayCircleOutline className='play-ico' size="55px" color="#f9e7cfff" />
                 </button>
               </ImageListItem>
             ))}
