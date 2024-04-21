@@ -8,7 +8,7 @@ export default function Intro() {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentFrame(prevFrame => {
-                if (prevFrame === 4) {
+                if (prevFrame === 1) {
                     clearInterval(intervalId);
                     return prevFrame;
                 } else {
@@ -24,30 +24,29 @@ export default function Intro() {
         <div className='intro-box'>
             <SwipeableTemporaryDrawer />
             <Link to="/omne" className='intro-container' style={{ textDecoration: "none", color: "inherit" }}>
-                <div className='intro-frame' style={{ display: currentFrame === 1 ? 'block' : 'none' }}>
+                {/* <div className='intro-frame' style={{ display: currentFrame === 1 ? 'block' : 'none' }}>
                     <img className='intro-img fade-in' src="./images/intro/1.svg" alt="illustration" />
                 </div>
                 <div className='intro-frame' style={{ display: currentFrame === 2 ? 'block' : 'none' }}>
                     <img className='intro-img fade-in' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
                     <img className='intro-img fade-in' src="./images/intro/2_after.svg" alt="illustration" />
-                </div>
-                <div className='intro-frame' style={{ display: currentFrame === 3 ? 'block' : 'none' }}>
+                </div> */}
+                <div className='intro-frame' style={{ display: currentFrame === 1 ? 'block' : 'none' }}>
                     <img className='intro-img' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/2_after.svg" alt="illustration" />
-                    <img className='intro-img bounce' src="./images/intro/3.svg" alt="illustration" />
+                    <img className='intro-img' src="./images/intro/4.svg" alt="illustration" />
+                    <img className='intro-img bounce' src="./images/intro/3.svg" alt="illustration" />    
                 </div>
-                <div className='intro-frame' style={{ display: currentFrame === 4 ? 'block' : 'none' }}>
+                {/* <div className='intro-frame' style={{ display: currentFrame === 2 ? 'block' : 'none' }}>
                     <img className='intro-img' src="./images/intro/2_before.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/1.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/2_after.svg" alt="illustration" />
                     <img className='intro-img' src="./images/intro/3.svg" alt="illustration" />
                     <img className='intro-img bounce' src="./images/intro/4.svg" alt="illustration" />
-                </div>
+                </div> */}
             </Link>
         </div>
     );
-   
 }
-
