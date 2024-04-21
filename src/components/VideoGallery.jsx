@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { IoPlayCircleOutline } from "react-icons/io5";
 
 const numberOfVideos = Array.from(Array(33).keys(), i => i + 1);
 
@@ -13,14 +14,10 @@ export default function VideoGallery( {videos} ) {
   const isUnder700screen = useMediaQuery('(max-width:700px)');
   const isUnder500screen = useMediaQuery('(max-width:500px)');
 
-  const [hoveredVideo, setHoveredVideo] = useState(null);
+  const [startPlay, setStartPlay] = useState(null);
 
-  const handleMouseEnter = (index) => {
-    setHoveredVideo(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredVideo(null);
+  const handleMouseClick = (index) => {
+    setStartPlay(index);
   };
   
   return (
@@ -41,10 +38,9 @@ export default function VideoGallery( {videos} ) {
             {numberOfVideos.map((num) => (
               <ImageListItem
                 key={num}
-                onMouseEnter={() => handleMouseEnter(num)}
-                onMouseLeave={handleMouseLeave}
+
               >
-                {hoveredVideo === num ? (
+                {startPlay === num ? (
                   <div className='video-wrapper'>
                     <video
                       src={`videos/${num}.mp4`}
@@ -60,9 +56,13 @@ export default function VideoGallery( {videos} ) {
                     srcSet={`videos/thumbnails/${num}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
                     src={`videos/thumbnails/${num}.webp?w=248&fit=crop&auto=format`}
                     alt={"uces"}
-          
                   />
                 )}
+                <button className={`play-btn ${startPlay == num ? "hidden" : ""}`} 
+                    onClick={() => handleMouseClick(num)}
+                >
+                  <IoPlayCircleOutline className='play-ico' size="5vw" color="#f9e7cfff" />
+                </button>
               </ImageListItem>
             ))}
           </ImageList>
