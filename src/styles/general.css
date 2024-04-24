@@ -133,6 +133,10 @@ ul {
     font-weight: 600;
 }
 
+.overflowX-hidden {
+    overflow-y: hidden;
+}
+
 .tip {
     color: var(--light-brown);
     background-color: var(--custom-brown);

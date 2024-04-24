@@ -40,7 +40,7 @@ export default function GallerySection ( { numberOfImages, heading, sourceFolder
     <section className="gallery-section" id={id}>
         <h2 className={`h-2 ${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} pt-6'`}>{heading}</h2>
         <ImageList variant="masonry" 
-            className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
+            className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5 overflowX-hidden`} 
             cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3} 
             gap={35}>
             {numbers.map((num) => (

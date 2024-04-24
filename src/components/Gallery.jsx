@@ -13,12 +13,15 @@ const doplnky = Array.from (Array(22).keys(), i => i + 1);
 
 export default function Gallery() {
 
+  console.log(window.scrollY)
+
   const isUnder600screen = useMediaQuery("(max-width:600px)");
 
   const [scrolledMenu, setScrolledMenu] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState(false);
 
   useEffect(() => {
+    
     const handleScroll = () => {
       const isScrolled = window.scrollY > (isUnder600screen ? 80 : 170);
       setScrolledMenu(isScrolled);
@@ -36,6 +39,7 @@ export default function Gallery() {
         setActiveSection(current)
       });
     };
+
     document.addEventListener('scroll', handleScroll);
 
     return () => {

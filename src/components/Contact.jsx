@@ -21,20 +21,20 @@ export default function Contact() {
               <a className='text big contact hover-scale' href="mailto:karolinacechova22@gmail.com">karolinacechova22@gmail.com</a>
               <div className='contacts-flex mt-2'>
                 
-                <a className='hover-scale' href="https://api.whatsapp.com/send?phone=732928740">
+                <a className='hover-scale contact-ico' href="https://api.whatsapp.com/send?phone=732928740">
                   <FaWhatsapp size={40}/>
                 </a>
-                <a className='hover-scale' href="https://www.instagram.com/vlaskolaska/">
+                <a className='hover-scale contact-ico' href="https://www.instagram.com/vlaskolaska/">
                   <FaInstagram size={40}/>
                 </a>
-                <a className='hover-scale' href='https://maps.app.goo.gl/CAkFdRvhrEF8vnvq9'>
+                <a className='hover-scale contact-ico' href='https://maps.app.goo.gl/CAkFdRvhrEF8vnvq9'>
                   <SlLocationPin size={40}/>
                 </a>
               </div>
               </section>
               <section className='recommendations-section'>
                 <h2 className='text big emphasized contact'>doporučuji</h2>
-                <a href='https://www.instagram.com/face_c.a.s.e/'>
+                <a className='contact-ico' href='https://www.instagram.com/face_c.a.s.e/'>
                   <FaInstagram className='hover-scale' size={40}/>
                   <span> face_c.a.s.e</span>
                 </a>
