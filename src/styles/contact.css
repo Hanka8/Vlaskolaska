@@ -9,10 +9,10 @@
 }
 
 .page.contact {
-    background-image: url(../images/contact.webp);
+    background-image: url(../images/contact_bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: 50vw bottom;
     background-color: #efe3d7;
     color: var(--custom-brown);
     padding-bottom: 0;
