@@ -201,18 +201,12 @@
 }
 
 .video-wrapper {
-    height: 40vw;
+    height: 30%;
 }
 
 @media screen and (max-width: 1000px) {
     .video-wrapper {
-        height: 70vw;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .video-wrapper {
-        height: 150vw;
+        height: 50%;
     }
 }
 

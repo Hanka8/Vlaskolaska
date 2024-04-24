@@ -31,9 +31,9 @@ export default function VideoGallery( {videos} ) {
         <div className='page-content gallery'>
           <Box sx={{ width: "100vw", height: "fit-content", overflowY: 'hidden', marginInline: "0" }}>
           <ImageList
-            className={`${isUnder1000screen ? isUnder500screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
+            className={`${isUnder1000screen ? isUnder700screen ? "mi-2" : "mi-5" : "mi-10"} mt-2 mb-5`} 
             variant="masonry" 
-            cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3}  
+            cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3}
             gap={35}>
             {numberOfVideos.map((num) => (
               <ImageListItem
