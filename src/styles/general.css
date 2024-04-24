@@ -8,6 +8,18 @@
     --text: #513017;
 }
 
+@media (prefers-color-scheme: dark) and (not (prefers-color-scheme: dark) and (pointer: none) and (hover: none) and (update: none) and (overflow-block: none) and (overflow-inline: none)) {
+    :root {
+    --logo-background: #ffffff;
+    --custom-brown: #805f46ff;
+    --custom-blue: #dff1f3ff;
+    --custom-orange: #ffe2d4ff;
+    --custom-yellow: #f9e7cfff;
+    --light-brown: #efe3d7;
+    --text: #513017;
+    }
+}
+
 ::selection {
     background-color: var(--custom-brown);
     color: var(--light-brown);
