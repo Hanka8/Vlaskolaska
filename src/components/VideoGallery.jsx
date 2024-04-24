@@ -5,6 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { IoPlayCircleOutline } from "react-icons/io5";
+import UseScroll from './hooks/UseScroll';
 
 const numberOfVideos = Array.from(Array(33).keys(), i => i + 1);
 
@@ -12,17 +13,18 @@ export default function VideoGallery( {videos} ) {
 
   const isUnder1000screen = useMediaQuery('(max-width:1000px)');
   const isUnder700screen = useMediaQuery('(max-width:700px)');
-  const isUnder500screen = useMediaQuery('(max-width:500px)');
 
   const [startPlay, setStartPlay] = useState(null);
 
   const handleMouseClick = (index) => {
     setStartPlay(index);
   };
+
+  const scrolled = UseScroll();
   
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <SwipeableTemporaryDrawer scrolled={scrolled} />
       <div className='page page-gallery'>
         <h1 className='page-logo logo-gallery'>
               <img src="images/gallery.svg" alt="galerie"/>
