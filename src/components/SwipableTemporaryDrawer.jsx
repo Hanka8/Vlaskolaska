@@ -43,7 +43,7 @@ export default function SwipeableTemporaryDrawer({scrolledMenu, gallery, scrolle
               <ListItemText primary={text[0]} />
             </ListItemButton>
           </ListItem>
-        </Link>
+        </Link> 
       ))}
       </List>
     </Box>
