@@ -40,6 +40,9 @@ export default function Contact() {
                 </a>
               </section>
           </div>
+          <footer>
+            <img src="./images/contact_bg.png" alt="" />
+          </footer>
       </div>
     </>
   )
