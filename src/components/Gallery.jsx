@@ -3,6 +3,7 @@ import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import { BsInstagram } from "react-icons/bs";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GallerySection from './GallerySection';
+import { motion } from 'framer-motion';
 
 // creating arrays of numbers because of the number of images in the folders and naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
@@ -79,52 +80,85 @@ export default function Gallery() {
           <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
         <div className={`page-content gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
-           {activeSection === "pripravy" && (
-          <GallerySection
-            numberOfImages={32}
-            heading={"Přípravy"}
-            sourceFolder={"pripravy"}
-            id={"pripravy"}
-          />
+
+        <motion.div
+          initial={{opacity: 0}} 
+          animate={{opacity: 1, transition: {duration: 0.4}}}
+          exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+
+          {activeSection === "pripravy" && (
+            <motion.div
+              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
+              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+              <GallerySection
+                numberOfImages={32}
+                heading={"Přípravy"}
+                sourceFolder={"pripravy"}
+                id={"pripravy"}
+              />
+            </motion.div>
+          )}
+
+          {activeSection === "nevesty" && (
+            <motion.div
+              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
+              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+              <GallerySection
+                numberOfImages={21}
+                heading={"Nevěsty"}
+                sourceFolder={"nevesty"}
+                id={"nevesty"}
+              />
+            </motion.div>
+          )}
+
+          {activeSection === "ucesy" && (
+            <motion.div
+              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
+              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+              <GallerySection
+                numberOfImages={29}
+                heading={"Účesy"}
+                sourceFolder={"ucesy"}
+                id={"ucesy"}
+              />
+            </motion.div>
+          )}
+
+          {activeSection === "makeup" && (
+            <motion.div
+              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
+              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+              <GallerySection 
+                numberOfImages={10}
+                heading={"Makeup"}
+                sourceFolder={"makeup"}
+                id={"makeup"}
+              />
+            </motion.div>
+          )}
+
+          {activeSection === "doplnky" && (
+            <motion.div
+              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
+              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
+              <GallerySection
+                numberOfImages={22}
+                heading={"Doplňky"}
+                sourceFolder={"doplnky"}
+                id={"doplnky"}
+              />
+          </motion.div>
         )}
 
-        {activeSection === "nevesty" && (
-          <GallerySection
-            numberOfImages={21}
-            heading={"Nevěsty"}
-            sourceFolder={"nevesty"}
-            id={"nevesty"}
-          />
-        )}
-
-        {activeSection === "ucesy" && (
-          <GallerySection
-            numberOfImages={29}
-            heading={"Účesy"}
-            sourceFolder={"ucesy"}
-            id={"ucesy"}
-          />
-        )}
-
-        {activeSection === "makeup" && (
-          <GallerySection 
-            numberOfImages={10}
-            heading={"Makeup"}
-            sourceFolder={"makeup"}
-            id={"makeup"}
-          />
-        )}
-
-        {activeSection === "doplnky" && (
-          <GallerySection
-            numberOfImages={22}
-            heading={"Doplňky"}
-            sourceFolder={"doplnky"}
-            id={"doplnky"}
-          />
-        )}
-        </div>
+        </motion.div>
       </div>
-    </>
+    </div>
+  </>
   )
 }

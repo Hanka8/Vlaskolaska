@@ -2,8 +2,11 @@ import React from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { SlLocationPin } from "react-icons/sl";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Contact() {
+
+  const isUnder1340screen = useMediaQuery("(max-width:1340px)");
 
   return (
     <>
@@ -14,6 +17,7 @@ export default function Contact() {
               <span className='visually-hidden'>kontakt</span>
           </h1>
           <div className='page-content contact'>
+            <div>
             <section>
               <p className='text big emphasized contact'>Karolína Čechová</p>
               <p className='text big contact'>IČO: 21104387</p>
@@ -38,10 +42,18 @@ export default function Contact() {
                   <span> face_c.a.s.e</span>
                 </a>
               </section>
+              </div>
+              {isUnder1340screen && (
+                <div className='page-image'>
+                  <img className="img" src="./images/contact_bg.png" alt="karolina" />
+                </div>
+              )}
           </div>
-          <footer>
-            <img src="./images/contact_bg.png" alt="" />
-          </footer>
+          {!isUnder1340screen && (
+            <div className='page-image'>
+              <img className="img" src="./images/contact_bg.png" alt="karolina" />
+            </div>
+          )}
       </div>
     </>
   )
