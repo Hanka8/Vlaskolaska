@@ -88,8 +88,8 @@ export default function Gallery() {
 
           {activeSection === "pripravy" && (
             <motion.div
-              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
-              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              initial={{opacity: 0}} 
+              animate={{opacity: 1, transition: {duration: 0.4}}}
               exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
               <GallerySection
                 numberOfImages={32}
@@ -102,8 +102,8 @@ export default function Gallery() {
 
           {activeSection === "nevesty" && (
             <motion.div
-              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
-              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              initial={{opacity: 0}} 
+              animate={{opacity: 1, transition: {duration: 0.4}}}
               exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
               <GallerySection
                 numberOfImages={21}
@@ -116,8 +116,8 @@ export default function Gallery() {
 
           {activeSection === "ucesy" && (
             <motion.div
-              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
-              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              initial={{opacity: 0}} 
+              animate={{opacity: 1, transition: {duration: 0.4}}}
               exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
               <GallerySection
                 numberOfImages={29}
@@ -130,8 +130,8 @@ export default function Gallery() {
 
           {activeSection === "makeup" && (
             <motion.div
-              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
-              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              initial={{opacity: 0}} 
+              animate={{opacity: 1, transition: {duration: 0.4}}}
               exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
               <GallerySection 
                 numberOfImages={10}
@@ -144,8 +144,8 @@ export default function Gallery() {
 
           {activeSection === "doplnky" && (
             <motion.div
-              initial={{x: window.innerWidth, transition: {duration: 0.2}, opacity: 0}} 
-              animate={{x: 0, transition: {duration: 0.2}, opacity: 1}}
+              initial={{opacity: 0}} 
+              animate={{opacity: 1, transition: {duration: 0.4}}}
               exit={{x: window.innerWidth, transition: {duration: 0.2}}}>
               <GallerySection
                 numberOfImages={22}

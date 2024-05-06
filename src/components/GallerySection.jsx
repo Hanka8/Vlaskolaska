@@ -44,6 +44,9 @@ export default function GallerySection ( { numberOfImages, heading, sourceFolder
             cols={isUnder1000screen ? isUnder700screen ? 1 : 2 : 3} 
             gap={35}>
             {numbers.map((num) => (
+                <div key={num} 
+                    className='gallery-img-container'
+                    style={{backgroundImage: `url(images/small/${sourceFolder}/${num}.webp)`}}>
                 <ImageListItem key={num}>
                     <img 
                         className='gallery-img'
@@ -67,6 +70,7 @@ export default function GallerySection ( { numberOfImages, heading, sourceFolder
                         </Box>
                     </Modal>
                 </ImageListItem>
+                </div>
             ))}
         </ImageList>
     </section>
