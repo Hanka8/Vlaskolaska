@@ -10,6 +10,7 @@
 
 .page.contact {
     /* background-image: url(../images/contact_bg.svg); */
+    background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50vw bottom;
