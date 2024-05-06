@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import SwipeableTemporaryDrawer from '../SwipableTemporaryDrawer';
+import React from 'react';
+import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 import { Link } from 'react-router-dom'
 
 export default function Intro() {
-
     return (
         <div className='intro-box'>
             <SwipeableTemporaryDrawer />

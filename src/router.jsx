@@ -1,4 +1,4 @@
-import Intro from './components/Landing/Intro';
+import Intro from './components/Intro';
 import About from './components/About';
 import Process from './components/Process';
 import Gallery from './components/Gallery';

@@ -18,7 +18,7 @@ export default function Gallery() {
   const isUnder600screen = useMediaQuery("(max-width:600px)");
 
   const [scrolledMenu, setScrolledMenu] = React.useState(false);
-  const [activeSection, setActiveSection] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState("pripravy");
 
   useEffect(() => {
     
@@ -61,60 +61,68 @@ export default function Gallery() {
           </a>
           <ul className='gallery-nav-ul'>
             <li className={`gallery-nav-item ${activeSection=="pripravy" ? 'active' : ''}`}>
-              <a href="#pripravy">Přípravy</a>
+              <a onClick={() => setActiveSection("pripravy")}>Přípravy</a>
             </li>
             <li className={`gallery-nav-item ${activeSection=="nevesty" ? 'active' : ''}`}>
-              <a href="#nevesty">Nevěsty</a>
+              <a onClick={() => setActiveSection("nevesty")}>Nevěsty</a>
             </li>
             <li className={`gallery-nav-item ${activeSection=="ucesy" ? 'active' : ''}`}>
-              <a href="#ucesy">Účesy</a>
+              <a onClick={() => setActiveSection("ucesy")}>Účesy</a>
             </li>
             <li className={`gallery-nav-item ${activeSection=="makeup" ? 'active' : ''}`}>
-              <a href="#makeup">Makeup</a>
+              <a onClick={() => setActiveSection("makeup")}>Makeup</a>
             </li>
             <li className={`gallery-nav-item ${activeSection=="doplnky" ? 'active' : ''}`}>
-              <a href="#doplnky">Doplňky</a>
+              <a onClick={() => setActiveSection("doplnky")}>Doplňky</a>
             </li>
           </ul>
           <SwipeableTemporaryDrawer scrolledMenu={scrolledMenu} gallery={true} />
         </nav>
         <div className={`page-content gallery ${scrolledMenu ? 'scrolled-menu' : ''}`}>
-          
+           {activeSection === "pripravy" && (
+          <GallerySection
+            numberOfImages={32}
+            heading={"Přípravy"}
+            sourceFolder={"pripravy"}
+            id={"pripravy"}
+          />
+        )}
+
+        {activeSection === "nevesty" && (
+          <GallerySection
+            numberOfImages={21}
+            heading={"Nevěsty"}
+            sourceFolder={"nevesty"}
+            id={"nevesty"}
+          />
+        )}
+
+        {activeSection === "ucesy" && (
+          <GallerySection
+            numberOfImages={29}
+            heading={"Účesy"}
+            sourceFolder={"ucesy"}
+            id={"ucesy"}
+          />
+        )}
+
+        {activeSection === "makeup" && (
           <GallerySection 
-            numberOfImages = {32}
-            heading = {"Přípravy"}
-            sourceFolder = {"pripravy"}
-            id = {"pripravy"}
+            numberOfImages={10}
+            heading={"Makeup"}
+            sourceFolder={"makeup"}
+            id={"makeup"}
           />
+        )}
 
+        {activeSection === "doplnky" && (
           <GallerySection
-            numberOfImages = {21}
-            heading = {"Nevěsty"}
-            sourceFolder = {"nevesty"}
-            id = {"nevesty"}
+            numberOfImages={22}
+            heading={"Doplňky"}
+            sourceFolder={"doplnky"}
+            id={"doplnky"}
           />
-
-          <GallerySection
-            numberOfImages = {29}
-            heading = {"Účesy"}
-            sourceFolder = {"ucesy"}
-            id = {"ucesy"}
-          />
-
-          <GallerySection 
-            numberOfImages = {10}
-            heading = {"Makeup"}
-            sourceFolder = {"makeup"}
-            id = {"makeup"}
-          />
-
-          <GallerySection
-            numberOfImages = {22}
-            heading = {"Doplňky"}
-            sourceFolder = {"doplnky"}
-            id = {"doplnky"}
-          />
-
+        )}
         </div>
       </div>
     </>

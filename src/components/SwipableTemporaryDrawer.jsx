@@ -5,7 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuButton from './Landing/MenuButton';
+import MenuButton from './MenuButton';
 import { Link } from 'react-router-dom'
 
 export default function SwipeableTemporaryDrawer({scrolledMenu, gallery, scrolled}) {

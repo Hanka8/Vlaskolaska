@@ -2,7 +2,6 @@ import React from 'react'
 import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { SlLocationPin } from "react-icons/sl";
-import { MdAlternateEmail } from "react-icons/md";
 
 export default function Contact() {
 
