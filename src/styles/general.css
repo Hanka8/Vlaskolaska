@@ -46,6 +46,10 @@ a:visited {
     color: inherit;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
 }
