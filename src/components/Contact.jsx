@@ -1,8 +1,9 @@
 import React from 'react'
-import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { SlLocationPin } from "react-icons/sl";
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 
 export default function Contact() {
 

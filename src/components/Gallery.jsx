@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
+import { Link, useParams } from 'react-router-dom';
 import { BsInstagram } from "react-icons/bs";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import GallerySection from './GallerySection';
 import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom';
 
-// creating arrays of numbers because of the number of images in the folders and naming convention
+import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
+import GallerySection from './GallerySection';
+
+// creating arrays of numbers because of the number of images in the folders and my naming convention
 const pripravy = Array.from(Array(32).keys(), (i) => i + 1);
 const nevesty = Array.from(Array(21).keys(), (i) => i + 1);
 const ucesy = Array.from(Array(29).keys(), (i) => i + 1);

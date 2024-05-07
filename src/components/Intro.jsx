@@ -1,6 +1,7 @@
 import React from 'react';
-import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 import { Link } from 'react-router-dom'
+
+import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer';
 
 export default function Intro() {
     return (

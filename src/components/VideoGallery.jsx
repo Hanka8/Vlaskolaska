@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { IoPlayCircleOutline } from "react-icons/io5";
+
+import SwipeableTemporaryDrawer from './SwipableTemporaryDrawer'
 import UseScroll from './hooks/UseScroll';
 
+// creating arrays of numbers because of the number of videos in the folders and my naming convention
 const numberOfVideos = Array.from(Array(33).keys(), i => i + 1);
 
 export default function VideoGallery( {videos} ) {
