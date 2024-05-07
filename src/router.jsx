@@ -21,6 +21,7 @@ export const router = createBrowserRouter([
     { path: "/proces", element: <Process /> },
     { path: "/sluzby", element: <Services /> },
     { path: "/galerie", element: <Gallery /> },
+    { path: "/galerie/:section", element: <Gallery /> },
     { path: "/videa", element: <VideoGallery />},
     { path: "/kontakt", element: <Contact /> }
 ]);

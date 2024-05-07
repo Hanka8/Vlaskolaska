@@ -46,13 +46,13 @@ export default function GallerySection ( { numberOfImages, heading, sourceFolder
             {numbers.map((num) => (
                 <div key={num} 
                     className='gallery-img-container'
-                    style={{backgroundImage: `url(images/small/${sourceFolder}/${num}.webp)`}}>
+                    style={{backgroundImage: `url(../images/small/${sourceFolder}/${num}.webp)`}}>
                 <ImageListItem key={num}>
                     <img 
                         className='gallery-img'
                         onClick={handleOpen}
-                        srcSet={`images/${sourceFolder}/${num}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        src={`images/${sourceFolder}/${num}.webp?w=248&fit=crop&auto=format`}
+                        srcSet={`../images/${sourceFolder}/${num}.webp?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        src={`../images/${sourceFolder}/${num}.webp?w=248&fit=crop&auto=format`}
                         alt={num}
                         loading="lazy"
                     />

@@ -36,7 +36,7 @@ export default function Process() {
           <h3 className='h-3 ml-2'>Účes</h3>
           <p className='text ml-2'>Na zkoušku mějte prosím vlasy čisté a hlavně suché. Moc ráda se s Vámi pobavím o sladění účesu s Vaším obličejem a typem šatů.
   Zvážíme, na co jste zvyklá a jak byste chtěla působit. Sdělím Vám výhody a nevýhody konkrétních variant. Vše můžete v zrcadle kontrolovat a  dát mi upřímnou zpětnou vazbu. Preference jsou zcela na Vás.
-  Je možné si dle zvoleného účesu vybrat a zapůjčit <Link to={"/galerie"} className='link'>doplňky do vlasů.</Link> Pokud máte svoje, budu ráda, když mi je již na zkoušce ukážete.
+  Je možné si dle zvoleného účesu vybrat a zapůjčit <Link to={"/galerie/doplnky"} className='link'>doplňky do vlasů.</Link> Pokud máte svoje, budu ráda, když mi je již na zkoušce ukážete.
   Oblíbené jsou také květy ve vlasech. Můžeme se domluvit na konkrétní variantě květin. 
   Pobavíme se i o závoji, pokud ho máte v plánu mít.</p>
           <h3 className='h-3 ml-2'>Líčení</h3>
