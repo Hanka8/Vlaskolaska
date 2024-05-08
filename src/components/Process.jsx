@@ -53,7 +53,7 @@ export default function Process() {
           <h2 className='h-2'>Den svatby</h2>
           <p className='text'>Zvažte, kde chcete, aby probíhaly přípravy. Ideální je místnost, kde nebudeme rušeny, kde je co nejvíce denního světla a přístup k elektrické zásuvce. Pro všechny případy si s sebou vozím i pomocná světla.
             <br></br>
-            Během příprav čas letí a často do nich vstupují další záležitosti, proto je dobré mít časovou rezervu. Nemusíte ale mít obavy, čas příprav Vám ohlídám, Vaše instrukce mám totiž předem poznačené. Většinou je vhodné si na účes a makeup nevěsty vyčlenit 3 hodiny. Později oceníte, když na sobě mít župánek nebo košili, aby převlékání nepoškodilo účes a makeup při převlékání. Na zahájení příprav prosím mějte vlasy čisté a hlavně suché (myjte a sušte večer před nebo ráno v den svatby, dejte si záležet se sušení).
+            Během příprav čas letí a často do nich vstupují další záležitosti, proto je dobré mít časovou rezervu. Nemusíte ale mít obavy, čas příprav Vám ohlídám, Vaše instrukce mám totiž předem poznačené. Většinou je vhodné si na účes a makeup nevěsty vyčlenit 3 hodiny. Později oceníte, když na sobě budete mít župánek nebo košili, aby převlékání nepoškodilo účes a makeup při převlékání. Na zahájení příprav prosím mějte vlasy čisté a hlavně suché (myjte a sušte večer před nebo ráno v den svatby, dejte si záležet se sušení).
           </p>
         </div>
       </div>
