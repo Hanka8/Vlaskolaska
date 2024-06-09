@@ -15,5 +15,3 @@ This project is a website for a wedding services provider, showcasing various se
 - **React:** The project is built using React, a popular JavaScript library for building user interfaces.
 - **Material-UI:** Material-UI is used for styling and UI components, providing a sleek and modern design for the website.
 - **React Router:** React Router is used for client-side routing, enabling navigation between different pages without a page refresh.
-- **CSS Modules:** CSS Modules are used for styling individual components, ensuring encapsulation and preventing style conflicts.
-- **Git:** Git version control system is used for tracking changes in the project and collaboration among team members.
