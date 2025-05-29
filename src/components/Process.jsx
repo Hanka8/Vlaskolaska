@@ -45,15 +45,14 @@ export default function Process() {
   Setkávám se často s obavami nevěst, že budou příliš zmalované. Mým záměrem není Vám na obličeji vytvořit masku. Chci, abyste se cítila sebejistě a zároveň aby se makeup na fotografiích neztrácel. Najdeme spolu balanc. 
   Mezi značky, které používám patří Mac, Estée Lauder, Bobbi Brown, Huda Beauty, Annabelle Minerals nebo Too faced.</p>
           <p className='text'><span className="tip">TIP! </span>Doporučuji si koupit rtěnku, pro kterou se na zkoušce rozhodneme a dát ji svědkyni, aby Vaše rty byly krásně během celého svatebního dne.</p>
-          <p className='text'><span className='tip'>TIP! </span>Doporučuji si před svatbou (cca týden až dva) zajít na kosmetiku (doporučuji <a className='link' href='https://www.instagram.com/face_c.a.s.e/'>face_c.a.s.e.</a>), aby byla pleť co nejzdravější a nejlépe nachystaná a bez nežádoucích chloupků. Dle Vašich preferencí zvažte také úpravu obočí. 
-  Vzhledu vlasů může pomoci maska/kůra na doma z drogerie nebo např. Malibu C u kadeřnice.
-  Na zahájení příprav prosím mějte vlasy čisté a hlavně suché (myjte a sušte večer před nebo ráno v den svatby, dejte si záležet se sušením).</p>
+          <p className='text'><span className='tip'>TIP! </span>Doporučuji si před svatbou (cca týden až dva) zajít na kosmetiku (skvělá je <a className='link' href='https://www.instagram.com/face_c.a.s.e/'>face_c.a.s.e.</a>), aby byla pleť co nejzdravější a nejlépe nachystaná a bez nežádoucích chloupků. Dle Vašich preferencí zvažte také úpravu obočí. 
+  </p>
           <p className='text'><span className='tip'>TIP! </span>Vzhledu vlasů může pomoci maska/kůra na doma z drogerie nebo např. Malibu C u kadeřnice.</p>
           <p className='text'><span className='tip'>TIP! </span>Nezapomeňte na pitný režim a spánek.</p>
           <h2 className='h-2'>Den svatby</h2>
           <p className='text'>Zvažte, kde chcete, aby probíhaly přípravy. Ideální je místnost, kde nebudeme rušeny, kde je co nejvíce denního světla a přístup k elektrické zásuvce. Pro všechny případy si s sebou vozím i pomocná světla.
             <br></br>
-            Během příprav čas letí a často do nich vstupují další záležitosti, proto je dobré mít časovou rezervu. Nemusíte ale mít obavy, čas příprav Vám ohlídám, Vaše instrukce mám totiž předem poznačené. Většinou je vhodné si na účes a makeup nevěsty vyčlenit 3 hodiny. Později oceníte, když na sobě budete mít župánek nebo košili, aby převlékání nepoškodilo účes a makeup při převlékání. Na zahájení příprav prosím mějte vlasy čisté a hlavně suché (myjte a sušte večer před nebo ráno v den svatby, dejte si záležet se sušení).
+            Během příprav čas letí a často do nich vstupují další záležitosti, proto je dobré mít časovou rezervu. Nemusíte ale mít obavy, čas příprav Vám ohlídám, Vaše instrukce mám totiž předem poznačené. Většinou je vhodné si na účes a makeup nevěsty vyčlenit 3 hodiny. Později oceníte, když na sobě budete mít župánek nebo košili, aby převlékání nepoškodilo účes a makeup při převlékání. Na zahájení příprav prosím mějte vlasy čisté a hlavně suché (myjte a sušte večer před nebo ráno v den svatby, dejte si záležet se sušením).
           </p>
         </div>
       </div>
