@@ -23,7 +23,7 @@ export default function Process() {
               <a className='link' hhref="https://www.instagram.com/vlaskolaska/">Instagram</a> nebo
               <a className='link' href="mailto:karolinacechova22@gmail.com">e-mail</a>.
               <br></br>
-              Vážím si toho, že do mě vkládáte důvěru a ve Váš den se mi svěříte do rukou.<br></br>
+              Vážím si toho, že do mě vkládáte důvěru.<br></br>
               Budu ráda, když mi před prvním setkáním pošlete fotky přibližných představ účesu, případně i líčení.<br></br>
               Ke zvolení té pravé vizáže pomůže i fotka Vašich vlasů zezadu, Vašich svatebních šatů a svatební kytky. Není to však podmínkou.<br></br>
               Doporučuji už nestříhat vlásky.
