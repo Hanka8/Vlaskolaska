@@ -37,7 +37,7 @@ export default function SwipeableTemporaryDrawer({scrolledMenu, gallery, scrolle
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-      {[['O mně', "/omne"], ['Průvodce procesem', "/proces"], ['Služby a ceník', "/sluzby"], ['Galerie - foto', "/galerie/pripravy"], ["Galerie - video", "/videa"], ["Kontakt", "/kontakt"]].map((text, index) => (
+      {[['O mně', "/omne"], ['Proces', "/proces"], ['Služby a ceník', "/sluzby"], ['Galerie - foto', "/galerie/pripravy"], ["Galerie - video", "/videa"], ["Kontakt", "/kontakt"]].map((text, index) => (
         <Link to={text[1]} style={{textDecoration: "none", color: "inherit"}}>
           <ListItem key={text[0]} disablePadding>
             <ListItemButton>
