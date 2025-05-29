@@ -26,7 +26,7 @@ export default function Process() {
               Vážím si toho, že do mě vkládáte důvěru.<br></br>
               Budu ráda, když mi před prvním setkáním pošlete fotky přibližných představ účesu, případně i líčení.<br></br>
               Ke zvolení té pravé vizáže pomůže i fotka Vašich vlasů zezadu, Vašich svatebních šatů a svatební kytky. Není to však podmínkou.<br></br>
-              Doporučuji už nestříhat vlásky.
+              Doporučuji už vlásky nestříhat.
           </p>
           <h2 className='h-2'>Zkouška</h2>
           <p className='text'>Provedení zkoušky může být podceňováno. Nicméně jde o gró naplnění Vašich představ a celkové spokojenosti. Tam se vše „upeče“. Termín zkoušky můžeme domluvit dle časových možností, doporučuji 1-3 týdny před svatbou. Zkouška bude probíhat tam, kde si budete přát Vy, trvá přibližně 2,5 - 3,5 hodiny.</p>
